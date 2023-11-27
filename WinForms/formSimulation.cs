@@ -29,6 +29,7 @@ namespace WinForms
         int indexSorted = 0;
         List<List<GMarkerGoogle>> ListSortedMarkers = new List<List<GMarkerGoogle>>();
         GMapOverlay markerOverlay;
+        private static Bitmap planeIcon = (Bitmap)Image.FromFile("Images\\avion2.png");
 
 
 
@@ -38,14 +39,7 @@ namespace WinForms
         private string startTimeString; //starting hour of the simulation hh:mm:ss
         private string endTimeString; //ending hour of the simulation hh:mm:ss
         int speed;// int to see at what speed is the simulation going
-        //private DateTime startTime;
-        //private DateTime endTime;
         bool timeSet = false;
-        int totalSecondsmax;
-        int totalSecondsmin;
-        int secondsInterval;
-
-
 
         public formSimulation()
         {
@@ -63,6 +57,7 @@ namespace WinForms
             gMapControl1.Position = new GMap.NET.PointLatLng(41.2974, 2.0833); // El Prat Airport, BCN
             gMapControl1.Zoom = 8;
 
+            //Set speed controller to x1
             speed = 1;
 
             SetTimeInterval();
@@ -70,24 +65,23 @@ namespace WinForms
             this.ListSorted = GroupByTime(tabla);
             // Create a marker overlay
             this.markerOverlay = new GMapOverlay("markers");
+            gMapControl1.Overlays.Add(markerOverlay);
 
         }
         private void picBoxPlayPause_Click(object sender, EventArgs e)
         {
             if (started)
             {
-                picBoxPlayPause.Image = Image.FromFile("pictures\\play.png");
+                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
                 timer.Stop();
-                //this.Stopwatch.Stop();
                 started = false;
             }
             else
             {
                 if (this.timeSet)
                 {
-                    picBoxPlayPause.Image = Image.FromFile("pictures\\pause.png");
+                    picBoxPlayPause.Image = Image.FromFile("Images\\pause.png");
                     timer.Start();
-                    //this.Stopwatch.Start();
                     started = true;
                 }
             }
@@ -120,7 +114,7 @@ namespace WinForms
 
 
             }
-            gMapControl1.Refresh();
+            gMapControl1.Refresh(); //Refresh the overlay
             ListSortedMarkers.Add(markers2remove);
             //When 4 seconds have passed since the time started we begin to remove the previous aircraft markers
             if (indexSorted >= 4)
@@ -145,8 +139,6 @@ namespace WinForms
             if (this.timeSet)
             {
                 timer.Stop();
-                //this.Stopwatch.Reset();
-                //timeLabel.Text = startTime.ToString(@"hh\:mm\:ss\.fff");
 
                 //Set the hour min and sec variables at start time
                 this.h = Convert.ToInt32(startTimeString.Split(':')[0]);
@@ -158,7 +150,7 @@ namespace WinForms
 
                 //Restart the plotlist index
                 indexSorted = 0;
-                picBoxPlayPause.Image = Image.FromFile("pictures\\play.png");
+                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
                 started = false;
                 // Clear all overlays (and markers) from the GMapControl
                 ListSortedMarkers.Clear();
@@ -207,10 +199,6 @@ namespace WinForms
                         this.startTimeString = minTimeString;
                         this.endTimeString = maxTimeString;
 
-                        this.totalSecondsmin = (int)minTime.TimeOfDay.TotalSeconds;
-                        this.totalSecondsmax = (int)maxTime.TimeOfDay.TotalSeconds;
-                        this.secondsInterval = (totalSecondsmax - totalSecondsmin) + 1;
-
                         this.timeSet = true;
                     }
                     else
@@ -239,15 +227,12 @@ namespace WinForms
 
         private GMarkerGoogle AddMarkerToMap(double lat, double lon, string title, double heading, string track)
         {
-            Bitmap icon = (Bitmap)System.Drawing.Image.FromFile("pictures\\avion2.png");
             // Create a marker at the specified location
-            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat - 0.0005, lon), RotateImage(icon, (float)(heading - 90)));
+            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat - 0.0005, lon), RotateImage(planeIcon, (float)(heading - 90)));
 
 
 
             // Add the overlay to the map control
-            gMapControl1.Overlays.Add(markerOverlay); //thanks to rdoubleui :D
-
             markerOverlay.Markers.Add(marker);
 
 
@@ -271,7 +256,13 @@ namespace WinForms
                 speed = 3;
                 speedLabel.Text = "x4";
             }
-
+            else if (speed == 3)
+            {
+                timer.Interval = 100;
+                speed = 4;
+                speedLabel.Text = "x10";
+            }
+            
         }
 
         private void decreaseSpeedBtn_Click(object sender, EventArgs e)
@@ -287,6 +278,12 @@ namespace WinForms
                 timer.Interval = 1000;
                 speed = 1;
                 speedLabel.Text = "x1";
+            }
+            else if(speed == 4)
+            {
+                timer.Interval=250;
+                speed = 3;
+                speedLabel.Text = "x4";
             }
 
         }
