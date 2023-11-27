@@ -1,0 +1,112 @@
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\bin\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\bin\Debug\net6.0-windows\Project2.deps.json
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\bin\Debug\net6.0-windows\Project2.runtimeconfig.json
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\bin\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\bin\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.csproj.AssemblyReference.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfoInputs.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.AssemblyInfo.cs
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.csproj.CoreCompileInputs.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\refint\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll

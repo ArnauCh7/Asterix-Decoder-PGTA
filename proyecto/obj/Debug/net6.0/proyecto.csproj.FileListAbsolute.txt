@@ -1,0 +1,28 @@
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\bin\Debug\net6.0\proyecto.exe
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\bin\Debug\net6.0\proyecto.deps.json
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\bin\Debug\net6.0\proyecto.runtimeconfig.json
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\bin\Debug\net6.0\proyecto.dll
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\bin\Debug\net6.0\proyecto.pdb
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.AssemblyInfoInputs.cache
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.AssemblyInfo.cs
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.csproj.CoreCompileInputs.cache
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.dll
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\refint\proyecto.dll
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.pdb
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\proyecto.genruntimeconfig.cache
+C:\Users\LucasSS\Desktop\PGTA\asterixpropio\proyecto\proyecto\obj\Debug\net6.0\ref\proyecto.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0\proyecto.exe
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0\proyecto.deps.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0\proyecto.runtimeconfig.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0\proyecto.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\bin\Debug\net6.0\proyecto.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.GeneratedMSBuildEditorConfig.editorconfig
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.AssemblyInfoInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.AssemblyInfo.cs
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.csproj.CoreCompileInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\refint\proyecto.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\proyecto.genruntimeconfig.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\proyecto\obj\Debug\net6.0\ref\proyecto.dll

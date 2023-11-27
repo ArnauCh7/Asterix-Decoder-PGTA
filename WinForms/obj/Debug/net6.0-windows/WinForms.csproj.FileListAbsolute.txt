@@ -1,0 +1,430 @@
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+G:\.shortcut-targets-by-id\1_LzztR-XtQg1UEowcIWOcrk8FUvq9v7Z\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+G:\Mi unidad\PGTA\Proyecto 2\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+D:\Nueva carpeta\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+D:\PGTA Project 2\Proyecto2_V1-20231114T213705Z-001\Proyecto2_V1\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+D:\PGTA Project 2\Proyecto2_v1.2\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+D:\Proyecto2_v1.2.1\Proyecto2_v1.2\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\Project2.dll
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formCSV.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formKML.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+C:\Users\LucasSS\Desktop\Proyecto2_v1.3\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\refint\WinForms.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\WinForms.exe
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\WinForms.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\WinForms.pdb
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\CsvHelper.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\AdvancedDataGridView.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\GMap.NET.Core.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\GMap.NET.WindowsForms.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\ReaLTaiizor.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Project2.pdb
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.Form1.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.formDisplay.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.formHelp.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.formHome.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.formImport.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.formSimulation.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.Properties.Resources.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.GenerateResource.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfoInputs.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.AssemblyInfo.cs
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CoreCompileInputs.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.CopyComplete
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll

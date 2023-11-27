@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "638876c6-f056-466e-97bd-4c38ad495c37": {
+      "ProjectGuid": "638876c6-f056-466e-97bd-4c38ad495c37",
+      "DisplayName": "Project2",
+      "ColorIndex": 0
+    },
+    "230bcb07-5847-4a94-9cff-acc0f8383841": {
+      "ProjectGuid": "230bcb07-5847-4a94-9cff-acc0f8383841",
+      "DisplayName": "WinForms",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
