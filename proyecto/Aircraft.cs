@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -183,7 +184,30 @@ namespace Project2
                         }
                         else
                         {
-                            altitude_meter = Convert.ToString(Convert.ToDouble(aircraft.FL_ft[i - 1]) * 0.3048).Replace(',', '.');
+                            if (i != 0)
+                            {
+                                int index = 1;
+                                while (true)
+                                {
+                                    if (aircraft.FL_ft[i - index] == "")
+                                    {
+                                        index++;
+                                    }
+                                    else
+                                    {
+                                        altitude_meter = Convert.ToString(Convert.ToDouble(aircraft.FL_ft[i - index]) * 0.3048).Replace(',', '.');
+                                        break;
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                altitude_meter = Convert.ToString(Convert.ToDouble(aircraft.FL_ft[i + 1]) * 0.3048).Replace(',', '.');
+                            }
+                           
+                            
+                            
                         }
 
                         if (i == aircraft.LatitudeList.Count - 1)

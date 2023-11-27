@@ -1386,23 +1386,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arnau\\.nuget\\packages\\": {},
+    "C:\\Users\\LucasSS\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj",
+      "projectUniqueName": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj",
       "projectName": "Project2",
-      "projectPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj",
-      "packagesPath": "C:\\Users\\arnau\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\obj\\",
+      "projectPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj",
+      "packagesPath": "C:\\Users\\LucasSS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\arnau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LucasSS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
