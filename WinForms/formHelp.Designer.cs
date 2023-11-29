@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHelp));
+            richTextBox1 = new RichTextBox();
             SuspendLayout();
             // 
-            // label1
+            // richTextBox1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(283, 159);
-            label1.Name = "label1";
-            label1.Size = new Size(200, 86);
-            label1.TabIndex = 0;
-            label1.Text = "HELP";
+            richTextBox1.AutoWordSelection = true;
+            richTextBox1.DetectUrls = false;
+            richTextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBox1.Location = new Point(2, 1);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(911, 598);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // formHelp
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(richTextBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "formHelp";
             Text = "formHelp";
+            Load += formHelp_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private RichTextBox richTextBox1;
     }
 }

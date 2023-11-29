@@ -192,7 +192,7 @@ namespace WinForms
             }
             else
             {
-                MessageBox.Show("Something went wrong :(");
+                MessageBox.Show("No name or directory selected. Please insert a valid name or location");
             }
         }
     }

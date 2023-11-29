@@ -366,7 +366,7 @@ namespace WinForms
             }
             else
             {
-                MessageBox.Show("Something went wrong :(");
+                MessageBox.Show("No name or directoy selected. Please insert a valid name");
             }
         }
     }

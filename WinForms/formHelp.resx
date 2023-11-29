@@ -117,4 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>**Help**
+
+**Navigation:**
+- To expand the column displaying button names, click on the top button labeled "Help."
+
+**Import File:**
+1. Click on "Import File" to access the Asterix file decoding section.
+2. In the Import section, click "Import" to upload the Asterix file you want to decode.
+
+**Display Section:**
+1. Navigate to the "Display" section.
+2. Click "Load Grid" to display the table of decoded data.
+3. Filter data by ID track number or time interval for a more focused view.
+4. Export decoded data to a CSV file by clicking "Export CSV."
+
+**Simulation Section:**
+1. Move to the "Simulation" section.
+2. Play or stop the simulation using the designated buttons.
+3. Restart the simulation at any point.
+4. Adjust the simulation speed with the "+" and "-" buttons in the right-bottom corner.
+
+**Export Trajectories to KML:**
+- To see the full trajectories of aircraft, click "Download to KML" in the bottom center.
+- Select a name and directory to download the KML file.
+- Open the KML file in Google Earth for a visual representation of the aircraft trajectories.
+
+*Note: Ensure that you follow the import sequence before exploring the "Display" or "Simulation" sections for accurate and meaningful results.*</value>
+  </data>
 </root>
