@@ -125,3 +125,4 @@ C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\pr
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\proyecto\obj\Debug\net6.0-windows\Project2.pdb
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\proyecto\obj\Debug\net6.0-windows\Project2.genruntimeconfig.cache
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\proyecto\obj\Debug\net6.0-windows\ref\Project2.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\proyecto\obj\Debug\net6.0-windows\Project2.sourcelink.json
