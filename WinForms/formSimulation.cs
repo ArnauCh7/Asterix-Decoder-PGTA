@@ -60,8 +60,10 @@ namespace WinForms
             //Set speed controller to x1
             speed = 1;
 
+            //Set the starting and ending times
             SetTimeInterval();
 
+            //Create the sorted list by second for the simulation
             this.ListSorted = GroupByTime(tabla);
             // Create a marker overlay
             this.markerOverlay = new GMapOverlay("markers");
@@ -75,18 +77,25 @@ namespace WinForms
                 picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
                 timer.Stop();
                 started = false;
+                btnReload.Enabled = true;
+                btnReload.BackColor = Color.CornflowerBlue;
             }
             else
             {
+                
                 if (this.timeSet)
                 {
                     picBoxPlayPause.Image = Image.FromFile("Images\\pause.png");
                     timer.Start();
                     started = true;
                 }
+                btnReload.Enabled = false;
+                btnReload.BackColor = Color.White;
             }
 
         }
+
+
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -103,13 +112,28 @@ namespace WinForms
                 h += 1;
             }
             string labeltext = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
-            
+
             timeLabel.Text = labeltext;
             List<GMarkerGoogle> markers2remove = new List<GMarkerGoogle>();
             foreach (string[] second in ListSorted[indexSorted])
             {
                 //Take the Lat, Long, Heading and Callsign of the aircraft to diplay the marker on the map
-                GMarkerGoogle marker = AddMarkerToMap(Convert.ToDouble(second[0]), Convert.ToDouble(second[1]), second[2], Convert.ToDouble(second[4]), second[5]);
+                if (second[6] != "N/A")
+                {
+                    double h = Convert.ToDouble(second[6]);
+                    if (h < 60)
+                    {
+                        if (second[7] != "N/A")
+                        {
+                            double Altitud_real = h * 100 + (Convert.ToDouble(second[7]) - 1013.25) * 30;
+                            second[6] = Convert.ToString(Altitud_real);
+                        }
+                        else second[6] = Convert.ToString(h * 100);
+                    }
+                }
+
+
+                GMarkerGoogle marker = AddMarkerToMap(Convert.ToDouble(second[0]), Convert.ToDouble(second[1]), second[2], Convert.ToDouble(second[4]), second[5], second[6]);
                 markers2remove.Add(marker);
 
 
@@ -148,14 +172,21 @@ namespace WinForms
                 //Set the timerLabel to teh start hour
                 timeLabel.Text = startTimeString;
 
+                //Set speed to x1
+                timer.Interval = 1000;
+                this.speed = 1;
+
                 //Restart the plotlist index
                 indexSorted = 0;
                 picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
                 started = false;
+
                 // Clear all overlays (and markers) from the GMapControl
                 ListSortedMarkers.Clear();
-                gMapControl1.Overlays.Clear();
                 markerOverlay.Clear();
+
+                //Enable Reload Button
+                btnReload.Enabled = true;
 
 
             }
@@ -204,15 +235,14 @@ namespace WinForms
                     else
                     {
                         // Handle the case where the DataTable is empty
-                        MessageBox.Show("The DataTable is empty. No minimum and maximum times available.");
-
+                        MessageBox.Show($"The DataTable is empty. No minimum and maximum times available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.timeSet = false;
                     }
                 }
                 else
                 {
                     // Handle the case where the DataTable is empty
-                    MessageBox.Show("The DataTable is empty. No minimum and maximum times available.");
+                    MessageBox.Show($"The DataTable is empty. No minimum and maximum times available.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.timeSet = false;
                 }
             }
@@ -225,7 +255,7 @@ namespace WinForms
 
         }
 
-        private GMarkerGoogle AddMarkerToMap(double lat, double lon, string title, double heading, string track)
+        private GMarkerGoogle AddMarkerToMap(double lat, double lon, string title, double heading, string track, string alt )
         {
             // Create a marker at the specified location
             GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat - 0.0005, lon), RotateImage(planeIcon, (float)(heading - 90)));
@@ -238,7 +268,7 @@ namespace WinForms
 
             // Optionally, add a tooltip to the marker
             marker.ToolTip = new GMap.NET.WindowsForms.ToolTips.GMapRoundedToolTip(marker);
-            marker.ToolTipText = $"{title}\n{track}";
+            marker.ToolTipText = $"{title}\nTrack:{track}\nAltitude:{alt}";
             return marker;
         }
 
@@ -262,7 +292,7 @@ namespace WinForms
                 speed = 4;
                 speedLabel.Text = "x10";
             }
-            
+
         }
 
         private void decreaseSpeedBtn_Click(object sender, EventArgs e)
@@ -279,9 +309,9 @@ namespace WinForms
                 speed = 1;
                 speedLabel.Text = "x1";
             }
-            else if(speed == 4)
+            else if (speed == 4)
             {
-                timer.Interval=250;
+                timer.Interval = 250;
                 speed = 3;
                 speedLabel.Text = "x4";
             }
@@ -310,7 +340,9 @@ namespace WinForms
                     row["Aircraft_ID"].ToString(),
                     row["Time"].ToString(),
                     row["Heading"].ToString(),
-                    row["Track_Number"].ToString()
+                    row["Track_Number"].ToString(),
+                    row["Flight_Level_Value"].ToString(),
+                    row["FL_Correction"].ToString()
                     }).ToList()
                 )
                 .ToList();
@@ -366,7 +398,46 @@ namespace WinForms
             }
             else
             {
-                MessageBox.Show("Something went wrong :(");
+                MessageBox.Show($"No name or directoy selected. Please insert a valid name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            
+            //Set speed controller to x1
+            speed = 1;
+
+            //Set the starting and ending times
+            SetTimeInterval();
+
+            //Create the sorted list by second for the simulation
+            this.ListSorted = GroupByTime(tabla);
+
+            if (this.timeSet)
+            {
+                timer.Stop();
+
+                //Set the hour min and sec variables at start time
+                this.h = Convert.ToInt32(startTimeString.Split(':')[0]);
+                this.m = Convert.ToInt32(startTimeString.Split(":")[1]);
+                this.s = Convert.ToInt32(startTimeString.Split(":")[2]);
+
+                //Set the timerLabel to teh start hour
+                timeLabel.Text = startTimeString;
+
+                //Set speed to x1
+                timer.Interval = 1000;
+                this.speed = 1;
+
+                //Restart the plotlist index
+                indexSorted = 0;
+                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
+                started = false;
+
+                // Clear all overlays (and markers) from the GMapControl
+                ListSortedMarkers.Clear();
+                markerOverlay.Clear();
             }
         }
     }

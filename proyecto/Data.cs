@@ -348,14 +348,14 @@ namespace Project2
                             }
 
                             //SP-Data Item Special Purpose Field
-                            // TODO: Preguntar a Alex si lo usa
+                            
                             if (fspec[29])
                             {
 
                             }
 
                             //RE-Data Item Reserved Expansion Field
-                            // TODO: Preguntar a Alex si lo usa
+                            
                             if (fspec[30])
                             {
 
@@ -372,8 +372,6 @@ namespace Project2
             }
 
             dataFieldDivide.RemoveAt(0);
-
-            //Flights.Set_Message_Values(dataFieldDivide, FspecList);
 
             
             return dataFieldDivide;

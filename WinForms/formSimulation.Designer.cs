@@ -39,6 +39,7 @@
             decreaseSpeedBtn = new PictureBox();
             increaseSpeedBtn = new PictureBox();
             btnKML = new Button();
+            btnReload = new Button();
             ((System.ComponentModel.ISupportInitialize)picBoxPlayPause).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBoxRestart).BeginInit();
             ((System.ComponentModel.ISupportInitialize)decreaseSpeedBtn).BeginInit();
@@ -110,10 +111,10 @@
             // 
             // speedLabel
             // 
-            speedLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            speedLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             speedLabel.AutoSize = true;
             speedLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            speedLabel.Location = new Point(691, 417);
+            speedLabel.Location = new Point(145, 417);
             speedLabel.Name = "speedLabel";
             speedLabel.Size = new Size(28, 21);
             speedLabel.TabIndex = 7;
@@ -121,9 +122,9 @@
             // 
             // decreaseSpeedBtn
             // 
-            decreaseSpeedBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            decreaseSpeedBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             decreaseSpeedBtn.Image = (Image)resources.GetObject("decreaseSpeedBtn.Image");
-            decreaseSpeedBtn.Location = new Point(663, 418);
+            decreaseSpeedBtn.Location = new Point(116, 415);
             decreaseSpeedBtn.Name = "decreaseSpeedBtn";
             decreaseSpeedBtn.Size = new Size(23, 23);
             decreaseSpeedBtn.TabIndex = 8;
@@ -132,9 +133,9 @@
             // 
             // increaseSpeedBtn
             // 
-            increaseSpeedBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            increaseSpeedBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             increaseSpeedBtn.Image = (Image)resources.GetObject("increaseSpeedBtn.Image");
-            increaseSpeedBtn.Location = new Point(737, 418);
+            increaseSpeedBtn.Location = new Point(179, 415);
             increaseSpeedBtn.Name = "increaseSpeedBtn";
             increaseSpeedBtn.Size = new Size(23, 23);
             increaseSpeedBtn.TabIndex = 9;
@@ -156,11 +157,27 @@
             btnKML.UseVisualStyleBackColor = false;
             btnKML.Click += btnKML_Click;
             // 
+            // btnReload
+            // 
+            btnReload.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnReload.BackColor = Color.CornflowerBlue;
+            btnReload.FlatAppearance.BorderSize = 0;
+            btnReload.FlatStyle = FlatStyle.Flat;
+            btnReload.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReload.Location = new Point(653, 405);
+            btnReload.Name = "btnReload";
+            btnReload.Size = new Size(106, 34);
+            btnReload.TabIndex = 11;
+            btnReload.Text = "Reload";
+            btnReload.UseVisualStyleBackColor = false;
+            btnReload.Click += btnReload_Click;
+            // 
             // formSimulation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnReload);
             Controls.Add(btnKML);
             Controls.Add(increaseSpeedBtn);
             Controls.Add(decreaseSpeedBtn);
@@ -191,5 +208,6 @@
         private PictureBox decreaseSpeedBtn;
         private PictureBox increaseSpeedBtn;
         private Button btnKML;
+        private Button btnReload;
     }
 }

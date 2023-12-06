@@ -31,6 +31,10 @@ namespace WinForms
         private void formDisplay_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            btnFilterID.Enabled = false;
+            btnClear.Enabled = false;
+            btnClear.BackColor = Color.White;
+            btnFilterID.BackColor = Color.White;
         }
 
         private void btnLoadGrid_Click(object sender, EventArgs e)
@@ -41,11 +45,16 @@ namespace WinForms
             advancedDataGridView1.EnableHeadersVisualStyles = false;
             advancedDataGridView1.ReadOnly = true;
             advancedDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
+            btnClear.Enabled = true;
+            btnFilterID.Enabled = true;
+            btnFilterID.BackColor = Color.CornflowerBlue;
+            btnClear.BackColor = Color.CornflowerBlue;
 
         }
 
         private void btnFilterID_Click(object sender, EventArgs e)
         {
+
             // Get the filter text from the TextBoxes
             string filterText1 = searchID.Text;
             string filterText2 = searchSSR.Text;
@@ -102,6 +111,7 @@ namespace WinForms
 
             // Update the DataGridView to reflect the filtered data
             advancedDataGridView1.DataSource = filteredDataTable;
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -125,33 +135,6 @@ namespace WinForms
 
         private bool IsValidTime(string timeText, DataTable dataTable)
         {
-            /*
-            // Try parsing the time with the correct format
-            if (DateTime.TryParseExact(timeText, "HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out DateTime parsedTime))
-            {
-                // Get the minimum and maximum times from the DataTable (assuming TimeColumn is in string format with milliseconds)
-                string minTimeString = (string)dataTable.Compute("MIN(Time)", "");
-                string maxTimeString = (string)dataTable.Compute("MAX(Time)", "");
-
-                // Parse the string times to DateTime format with milliseconds
-                DateTime minTime = DateTime.ParseExact(minTimeString, "HH:mm:ss.fff", null);
-                DateTime maxTime = DateTime.ParseExact(maxTimeString, "HH:mm:ss.fff", null);
-
-                // Extract the TimeOfDay from DateTime
-                TimeSpan minTimeOfDay = minTime.TimeOfDay;
-                TimeSpan maxTimeOfDay = maxTime.TimeOfDay;
-
-                TimeSpan enteredTime = parsedTime.TimeOfDay;
-
-                // Check if the time is between the minimum and maximum times
-                return enteredTime >= minTimeOfDay && enteredTime <= maxTimeOfDay;
-            }
-            else
-            {
-                // Return false if parsing fails or if the time is outside the specified range
-                return false;
-            }
-            */
             if (timeText.Length == 5)
             {
                 timeText = timeText + ":00.000";
@@ -192,7 +175,7 @@ namespace WinForms
             }
             else
             {
-                MessageBox.Show("Something went wrong :(");
+                MessageBox.Show($"No name or directory selected. Please insert a valid name or location", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -117,11 +117,6 @@ namespace proyecto
             Map(f => f.Calculated_Track_Velocity_Polar_GroundSpeed).Name("Calculated_Track_Velocity_Polar_GroundSpeed");
             Map(f => f.Calculated_Track_Velocity_Polar_Heading).Name("Calculated_Track_Velocity_Polar_Heading");
 
-            
-
-            
-
-           
 
             // Funciones Track Status
             Map(f => f.CNF).Name("CNF");
@@ -135,7 +130,6 @@ namespace proyecto
             Map(f => f.SUP).Name("SUP");
             Map(f => f.TCC).Name("TCC");
             Map(f => f.FX2).Name("FX2");
-
 
 
             Map(f => f.Height_Measured_by_3D_Radar).Name("Height_Measured_by_3D_Radar");
@@ -195,8 +189,6 @@ namespace proyecto
         public string Target_Report_Descriptor_PAIEP = "";
         public string Target_Report_Descriptor_PAIVAL = "";
         public string Target_Report_Descriptor_FX3 = "";
-
-
 
 
         // Funciones para la Position in polar Coordinates

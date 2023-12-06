@@ -16,6 +16,7 @@ using System.Formats.Asn1;
 using CsvHelper;
 using CsvHelper.Configuration;
 using System.Globalization;
+using GMap.NET.Internals;
 
 
 
@@ -50,33 +51,44 @@ namespace WinForms
             this.ControlBox = false;
             likeImage.Visible = false;
             uploadedLabel.Visible = false;
+            loadingtextbox.Visible = false;
+            progressBar1.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            loadingtextbox.Visible = true;
             uploadedLabel.Visible = false;
             likeImage.Visible = false;
+            progressBar1.Visible = false;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                loadingtextbox.Visible = true;
+                progressBar1.Visible = true;
+                progressBar1.Value = 0;
                 //Abrir y leer el archivo
                 Data fileData = new Data();
+                progressBar1.Value = 10;
                 Flight Flights = new Flight();
+                loadingtextbox.Visible = true;
                 FlightList ListaVuelos = new FlightList();
                 AsterixFile newfile = new AsterixFile(openFileDialog1.FileName);
-
+                loadingtextbox.Visible = true;
                 List<List<byte[]>> dataFields = fileData.SortData(Flights, newfile);
-
+                progressBar1.Value = 20;
                 List<BitArray> FspecList = fileData.GetFspecList();
-                progressBar1.Value = 50;
+                progressBar1.Value = 40;
+                loadingtextbox.Visible = true;
                 List<Flight> Vuelos = ListaVuelos.Set_Message_Values(dataFields, FspecList);
-
-
+                progressBar1.Value = 60;
+                loadingtextbox.Visible = true;
 
                 this.listaVuelos = Vuelos;
                 this.Datos = FlightList.GetDataTable(listaVuelos);
-
+                progressBar1.Value = 80;
                 uploadedLabel.Visible = true;
                 likeImage.Visible = true;
+                loadingtextbox.Visible = true;
 
                 //List<Flight> Volando = new List<Flight>();
                 //Volando.Add(Vuelos[0]);
@@ -87,9 +99,11 @@ namespace WinForms
                 this.Loaded = true;
                 progressBar1.Value = 100;
                 //KMLExporter.ExportToKML(Aviones, "flights2.kml");
+                loadingtextbox.Visible = true;
             }
             else
             {
+                loadingtextbox.Visible = false;
                 MessageBox.Show("Please select a valid file (*.ast)");
             }
         }
