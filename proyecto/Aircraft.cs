@@ -29,7 +29,13 @@ namespace Project2
 
 
 
-
+        /// <summary>
+        /// Filters the Flight list by Aiorcraft ID creating a class for each one of them where its atributes are 
+        /// lists with all the information provided by the messages of that Aircraft. If the ID is not given,, thus 
+        /// it is "N/A", the class will be created based on Track number of said message.
+        /// </summary>
+        /// <param name="flights"></param>
+        /// <returns></returns>
         static public List<Aircraft> OrganizeFlights(List<Flight> flights)
         {
             List<Aircraft> aircraftList = new List<Aircraft>();
@@ -143,8 +149,14 @@ namespace Project2
 
     }
 
+    
     public class KMLExporter
     {
+        /// <summary>
+        /// Creates KML file
+        /// </summary>
+        /// <param name="aircraftList"></param>
+        /// <param name="filePath"></param>
         public static void ExportToKML(List<Aircraft> aircraftList, string filePath)
         {
             StringBuilder kmlContent = new StringBuilder();
