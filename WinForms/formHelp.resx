@@ -146,9 +146,10 @@
   </metadata>
   <data name="label7.Text" xml:space="preserve">
     <value>1. Navigate to the "Display" section
-2. Click Load grid (wait until the data grid shows).
-3. Filter the data by Aircraft ID, Track number and by time interval.
-4. To export the grid as a CSV file click on Export CSV and sellect where to save the file.</value>
+2. Click "Load Grid" and wait until the data grid shown below
+3. Use the filters to search by Aircraft ID, Track number, and time interval
+4. To export the whole data grid into a CSV file, use the button "Export CSV" and select where to save the file
+5. If a new Asterix file is uploaded, remember to click "Load Grid" again to update the table with the new file information.</value>
   </data>
   <metadata name="label8.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -157,13 +158,19 @@
     <value>False</value>
   </metadata>
   <data name="label9.Text" xml:space="preserve">
-    <value>1. Move to the simulation section.
-2. Use Play and Stop button to run or pause the simulation and use Restart button to reset it.
-3. Increase or decrease simulation speed up to x10 with "+" and "-" respectively.
-4. Download a KLM that can be imported to Google Earth with the button in the bottom middle of the display.
-5. If a new file is imported please click on reload before running the simulation, if not done the simulation will run the previous loaded file.</value>
+    <value>1. Access the simulation by clicking on its respective section
+2. Use Play and Stop button to run and pause the simulation
+3. Restart the simulation with the Restart button at any time
+4. Increase or decrease simulation speed up to x10 with "+" and "-" respectively
+5. Download a KLM that can be imported into Google Earth to see the trajectories of the aircraft with the button in the bottom middle of the display
+6. If a new file is imported, please click on reload before running the simulation, if not done the simulation will run the previous file loaded.
+7. To drag the map use the right click on your mouse, and to zoom in and out use the mouse wheel</value>
   </data>
   <metadata name="label10.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="label10.Text" xml:space="preserve">
+    <value>*Note: Ensure to follow the correct sequence by first setting up the file with Import before you run either 
+"Display" or "Simulation", a message error will show otherwise to remind you to import the file*</value>
+  </data>
 </root>

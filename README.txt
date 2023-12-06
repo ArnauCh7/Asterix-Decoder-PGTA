@@ -14,6 +14,7 @@ Display:
 2. Click "Load Grid" and wait until the data grid shown below
 3. Use the filters to search by Aircraft ID, Track number, and time interval
 4. To export the whole data grid into a CSV file, use the button "Export CSV" and select where to save the file
+5. If a new Asterix file is uploaded, remember to click "Load Grid" again to update the table with the new file information.
 
 Simulation:
 1. Access the simulation by clicking on its respective section
@@ -21,7 +22,8 @@ Simulation:
 3. Restart the simulation with the Restart button at any time
 4. Increase or decrease simulation speed up to x10 with "+" and "-" respectively
 5. Download a KLM that can be imported into Google Earth to see the trajectories of the aircraft with the button in the bottom middle of the display
-6. If a new file is imported, please click on reload before running the simulation, if not done the simulation will run the previous file loaded
+6. If a new file is imported, please click on reload before running the simulation, if not done the simulation will run the previous file loaded.
+7. To drag the map use the right click on your mouse, and to zoom in and out use the mouse wheel
 
 *Note: Ensure to follow the correct sequence by first setting up the file with Import before you run either "Display" or "Simulation", a message error will show otherwise to remind you to import the file*
 
