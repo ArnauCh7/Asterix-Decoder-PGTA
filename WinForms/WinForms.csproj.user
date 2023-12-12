@@ -19,5 +19,8 @@
     <Compile Update="formSimulation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="P3.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

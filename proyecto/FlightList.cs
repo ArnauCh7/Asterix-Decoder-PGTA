@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using MultiCAT6.Utils;
+using System.Diagnostics;
 
 namespace Project2
 {
@@ -16,6 +17,7 @@ namespace Project2
     public class FlightList
     {
         List<Flight> flights=new List<Flight>();
+        List<Flight> flightsfiltered =new List<Flight>();
 
         public static DataTable GetDataTable(List<Flight> Vuelos)
         {
@@ -395,6 +397,27 @@ namespace Project2
             return flights;
         }
 
-        
+        public List<Flight> ApplyGeographicFilter(List<Flight> flights)
+        {
+            List<Flight> flightsfiltered = new List<Flight>();
+
+            foreach (Flight f in flights)
+            {
+                double latitude = Convert.ToDouble(f.Latitud);
+                double longitude = Convert.ToDouble(f.Longitud);
+
+                // Verificar las condiciones de filtrado
+                if (latitude >= 40.9 && latitude <= 41.7 && longitude >= 1.5 && longitude <= 2.6)
+                {
+                    // Agregar el vuelo a la lista de vuelos filtrados
+                    flightsfiltered.Add(f);
+                }
+            }
+
+            return flightsfiltered;
+        }
+
+
+
     }
 }

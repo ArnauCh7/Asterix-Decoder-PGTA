@@ -33,8 +33,8 @@ namespace WinForms
             this.ControlBox = false;
             btnFilterID.Enabled = false;
             btnClear.Enabled = false;
-            btnClear.BackColor = Color.White;
-            btnFilterID.BackColor = Color.White;
+            btnClear.BackColor = System.Drawing.Color.White;
+            btnFilterID.BackColor = System.Drawing.Color.White;
         }
 
         private void btnLoadGrid_Click(object sender, EventArgs e)
@@ -44,11 +44,11 @@ namespace WinForms
             advancedDataGridView1.DataSource = originalDataTable;
             advancedDataGridView1.EnableHeadersVisualStyles = false;
             advancedDataGridView1.ReadOnly = true;
-            advancedDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.CornflowerBlue;
+            advancedDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.CornflowerBlue;
             btnClear.Enabled = true;
             btnFilterID.Enabled = true;
-            btnFilterID.BackColor = Color.CornflowerBlue;
-            btnClear.BackColor = Color.CornflowerBlue;
+            btnFilterID.BackColor = System.Drawing.Color.CornflowerBlue;
+            btnClear.BackColor = System.Drawing.Color.CornflowerBlue;
 
         }
 

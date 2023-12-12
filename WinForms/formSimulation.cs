@@ -29,7 +29,7 @@ namespace WinForms
         int indexSorted = 0;
         List<List<GMarkerGoogle>> ListSortedMarkers = new List<List<GMarkerGoogle>>();
         GMapOverlay markerOverlay;
-        private static Bitmap planeIcon = (Bitmap)Image.FromFile("Images\\avion2.png");
+        private static Bitmap planeIcon = (Bitmap)System.Drawing.Image.FromFile("Images\\avion2.png");
 
 
 
@@ -74,23 +74,23 @@ namespace WinForms
         {
             if (started)
             {
-                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
+                picBoxPlayPause.Image = System.Drawing.Image.FromFile("Images\\play.png");
                 timer.Stop();
                 started = false;
                 btnReload.Enabled = true;
-                btnReload.BackColor = Color.CornflowerBlue;
+                btnReload.BackColor = System.Drawing.Color.CornflowerBlue;
             }
             else
             {
                 
                 if (this.timeSet)
                 {
-                    picBoxPlayPause.Image = Image.FromFile("Images\\pause.png");
+                    picBoxPlayPause.Image = System.Drawing.Image.FromFile("Images\\pause.png");
                     timer.Start();
                     started = true;
                 }
                 btnReload.Enabled = false;
-                btnReload.BackColor = Color.White;
+                btnReload.BackColor = System.Drawing.Color.White;
             }
 
         }
@@ -178,7 +178,7 @@ namespace WinForms
 
                 //Restart the plotlist index
                 indexSorted = 0;
-                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
+                picBoxPlayPause.Image = System.Drawing.Image.FromFile("Images\\play.png");
                 started = false;
 
                 // Clear all overlays (and markers) from the GMapControl
@@ -370,7 +370,7 @@ namespace WinForms
                 g.TranslateTransform(-originalImage.Width / 2, -originalImage.Height / 2);
 
                 // Draw the rotated image onto the new bitmap
-                g.DrawImage(originalImage, new Point(0, 0));
+                g.DrawImage(originalImage, new System.Drawing.Point(0, 0));
             }
 
             return rotatedImage;
@@ -432,7 +432,7 @@ namespace WinForms
 
                 //Restart the plotlist index
                 indexSorted = 0;
-                picBoxPlayPause.Image = Image.FromFile("Images\\play.png");
+                picBoxPlayPause.Image = System.Drawing.Image.FromFile("Images\\play.png");
                 started = false;
 
                 // Clear all overlays (and markers) from the GMapControl

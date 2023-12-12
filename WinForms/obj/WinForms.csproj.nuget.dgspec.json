@@ -131,9 +131,13 @@
               "target": "Package",
               "version": "[2.1.7, )"
             },
+            "IronXL.Excel": {
+              "target": "Package",
+              "version": "[2023.12.19, )"
+            },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.9.6, )"
+              "version": "[3.7.9.7, )"
             }
           },
           "imports": [

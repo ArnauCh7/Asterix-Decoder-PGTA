@@ -48,43 +48,43 @@
             uploadedLabel.Anchor = AnchorStyles.None;
             uploadedLabel.AutoSize = true;
             uploadedLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            uploadedLabel.Location = new Point(345, 251);
+            uploadedLabel.Location = new System.Drawing.Point(345, 251);
             uploadedLabel.Name = "uploadedLabel";
-            uploadedLabel.Size = new Size(232, 32);
+            uploadedLabel.Size = new System.Drawing.Size(232, 32);
             uploadedLabel.TabIndex = 2;
             uploadedLabel.Text = "Uploaded correctly";
             // 
             // likeImage
             // 
             likeImage.Anchor = AnchorStyles.None;
-            likeImage.Image = (Image)resources.GetObject("likeImage.Image");
-            likeImage.Location = new Point(408, 155);
+            likeImage.Image = (System.Drawing.Image)resources.GetObject("likeImage.Image");
+            likeImage.Location = new System.Drawing.Point(408, 155);
             likeImage.Margin = new Padding(3, 4, 3, 4);
             likeImage.Name = "likeImage";
-            likeImage.Size = new Size(79, 92);
+            likeImage.Size = new System.Drawing.Size(79, 92);
             likeImage.TabIndex = 3;
             likeImage.TabStop = false;
             // 
             // progressBar1
             // 
             progressBar1.Anchor = AnchorStyles.None;
-            progressBar1.Location = new Point(256, 433);
+            progressBar1.Location = new System.Drawing.Point(256, 433);
             progressBar1.Margin = new Padding(3, 4, 3, 4);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(403, 31);
+            progressBar1.Size = new System.Drawing.Size(403, 31);
             progressBar1.TabIndex = 4;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.None;
-            button1.BackColor = Color.CornflowerBlue;
+            button1.BackColor = System.Drawing.Color.CornflowerBlue;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(371, 312);
+            button1.Location = new System.Drawing.Point(371, 312);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(160, 67);
+            button1.Size = new System.Drawing.Size(160, 67);
             button1.TabIndex = 5;
             button1.Text = "Import";
             button1.UseVisualStyleBackColor = false;
@@ -98,18 +98,18 @@
             loadingtextbox.BorderStyle = BorderStyle.None;
             loadingtextbox.CharacterCasing = CharacterCasing.Upper;
             loadingtextbox.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            loadingtextbox.Location = new Point(380, 406);
+            loadingtextbox.Location = new System.Drawing.Point(380, 406);
             loadingtextbox.Name = "loadingtextbox";
             loadingtextbox.ReadOnly = true;
-            loadingtextbox.Size = new Size(163, 20);
+            loadingtextbox.Size = new System.Drawing.Size(163, 20);
             loadingtextbox.TabIndex = 6;
             loadingtextbox.Text = "LOADING, PLEASE WAIT.\r\n";
             // 
             // formImport
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new System.Drawing.Size(914, 600);
             Controls.Add(loadingtextbox);
             Controls.Add(button1);
             Controls.Add(progressBar1);

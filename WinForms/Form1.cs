@@ -21,6 +21,7 @@ namespace WinForms
         formSimulation simulation;
         formHome Home;
         formHelp help;
+        P3 p3;
         DataTable dt;
         List<Flight> flights;
         public Form1()
@@ -32,7 +33,7 @@ namespace WinForms
         private void mdiProp()
         {
             this.SetBevel(false);
-            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = System.Drawing.Color.FromArgb(232, 234, 237);
         }
 
         bool sidebarExpand = false;
@@ -77,10 +78,10 @@ namespace WinForms
 
         private void DisplayButton_Click(object sender, EventArgs e)
         {
-            
+
             if (display == null)
             {
-                if(import != null)
+                if (import != null)
                 {
                     if (import.Loaded)
                     {
@@ -138,7 +139,7 @@ namespace WinForms
         {
             if (simulation == null)
             {
-                if(import != null)
+                if (import != null)
                 {
                     if (import.Loaded)
                     {
@@ -157,7 +158,7 @@ namespace WinForms
                 {
                     MessageBox.Show($"An error occurred: Asterix file not Loaded. Please upload a file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             else { simulation.Activate(); }
         }
@@ -202,12 +203,36 @@ namespace WinForms
                 help.MdiParent = this;
                 help.Dock = DockStyle.Fill;
                 help.Show();
-            }else { help.Activate(); }
+            }
+            else { help.Activate(); }
         }
 
         private void Help_FormClosed(object? sender, FormClosedEventArgs e)
         {
             help = null;
+        }
+
+        private void P3Button_Click(object sender, EventArgs e)
+        {
+            if (p3 == null)
+            {
+                    
+                p3 = new P3();
+                p3.FormClosed += P3_FormClosed; ;
+                p3.MdiParent = this;
+                p3.Dock = DockStyle.Fill;
+                p3.Show();
+                    
+            }
+            else
+            {
+                p3.Activate();
+            }
+        }
+
+        private void P3_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            p3 = null;
         }
     }
 }

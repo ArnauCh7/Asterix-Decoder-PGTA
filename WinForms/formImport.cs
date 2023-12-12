@@ -72,6 +72,7 @@ namespace WinForms
                 Flight Flights = new Flight();
                 loadingtextbox.Visible = true;
                 FlightList ListaVuelos = new FlightList();
+                
                 AsterixFile newfile = new AsterixFile(openFileDialog1.FileName);
                 loadingtextbox.Visible = true;
                 List<List<byte[]>> dataFields = fileData.SortData(Flights, newfile);
@@ -82,7 +83,7 @@ namespace WinForms
                 List<Flight> Vuelos = ListaVuelos.Set_Message_Values(dataFields, FspecList);
                 progressBar1.Value = 60;
                 loadingtextbox.Visible = true;
-
+                Vuelos= ListaVuelos.ApplyGeographicFilter(Vuelos);
                 this.listaVuelos = Vuelos;
                 this.Datos = FlightList.GetDataTable(listaVuelos);
                 progressBar1.Value = 80;
@@ -90,14 +91,11 @@ namespace WinForms
                 likeImage.Visible = true;
                 loadingtextbox.Visible = true;
 
-                //List<Flight> Volando = new List<Flight>();
-                //Volando.Add(Vuelos[0]);
-                //Volando.Add(Vuelos[1]);
-                //Volando.Add(Vuelos[2]);
-
+               
                 this.Aviones = Aircraft.OrganizeFlights(Vuelos);
                 this.Loaded = true;
                 progressBar1.Value = 100;
+
                 //KMLExporter.ExportToKML(Aviones, "flights2.kml");
                 loadingtextbox.Visible = true;
             }
