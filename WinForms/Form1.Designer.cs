@@ -62,26 +62,28 @@
             pnTopBar.Controls.Add(sideButton);
             pnTopBar.Dock = DockStyle.Top;
             pnTopBar.Location = new Point(0, 0);
+            pnTopBar.Margin = new Padding(3, 4, 3, 4);
             pnTopBar.Name = "pnTopBar";
-            pnTopBar.Size = new Size(984, 38);
+            pnTopBar.Size = new Size(1125, 51);
             pnTopBar.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(40, 9);
+            label1.Location = new Point(46, 12);
             label1.Name = "label1";
-            label1.Size = new Size(49, 17);
+            label1.Size = new Size(63, 23);
             label1.TabIndex = 2;
             label1.Text = "MENU";
             // 
             // sideButton
             // 
             sideButton.Image = (Image)resources.GetObject("sideButton.Image");
-            sideButton.Location = new Point(3, 3);
+            sideButton.Location = new Point(3, 4);
+            sideButton.Margin = new Padding(3, 4, 3, 4);
             sideButton.Name = "sideButton";
-            sideButton.Size = new Size(31, 32);
+            sideButton.Size = new Size(35, 43);
             sideButton.SizeMode = PictureBoxSizeMode.CenterImage;
             sideButton.TabIndex = 1;
             sideButton.TabStop = false;
@@ -97,18 +99,20 @@
             sidebar.Controls.Add(pnHelp);
             sidebar.Dock = DockStyle.Left;
             sidebar.FlowDirection = FlowDirection.TopDown;
-            sidebar.Location = new Point(0, 38);
+            sidebar.Location = new Point(0, 51);
+            sidebar.Margin = new Padding(3, 4, 3, 4);
             sidebar.Name = "sidebar";
-            sidebar.Size = new Size(40, 473);
+            sidebar.Size = new Size(46, 630);
             sidebar.TabIndex = 1;
             // 
             // pnHome
             // 
             pnHome.BackColor = Color.CornflowerBlue;
             pnHome.Controls.Add(HomeButton);
-            pnHome.Location = new Point(3, 3);
+            pnHome.Location = new Point(3, 4);
+            pnHome.Margin = new Padding(3, 4, 3, 4);
             pnHome.Name = "pnHome";
-            pnHome.Size = new Size(279, 53);
+            pnHome.Size = new Size(319, 71);
             pnHome.TabIndex = 4;
             // 
             // HomeButton
@@ -117,11 +121,11 @@
             HomeButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             HomeButton.Image = (Image)resources.GetObject("HomeButton.Image");
             HomeButton.ImageAlign = ContentAlignment.MiddleLeft;
-            HomeButton.Location = new Point(-8, -16);
+            HomeButton.Location = new Point(-9, -21);
             HomeButton.Margin = new Padding(0);
             HomeButton.Name = "HomeButton";
-            HomeButton.Padding = new Padding(4, 0, 0, 0);
-            HomeButton.Size = new Size(298, 87);
+            HomeButton.Padding = new Padding(5, 0, 0, 0);
+            HomeButton.Size = new Size(341, 116);
             HomeButton.TabIndex = 2;
             HomeButton.Text = "         Home";
             HomeButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -131,9 +135,10 @@
             // pnImport
             // 
             pnImport.Controls.Add(ImportButton);
-            pnImport.Location = new Point(3, 62);
+            pnImport.Location = new Point(3, 83);
+            pnImport.Margin = new Padding(3, 4, 3, 4);
             pnImport.Name = "pnImport";
-            pnImport.Size = new Size(279, 53);
+            pnImport.Size = new Size(319, 71);
             pnImport.TabIndex = 5;
             // 
             // ImportButton
@@ -142,10 +147,11 @@
             ImportButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             ImportButton.Image = (Image)resources.GetObject("ImportButton.Image");
             ImportButton.ImageAlign = ContentAlignment.MiddleLeft;
-            ImportButton.Location = new Point(-8, -16);
+            ImportButton.Location = new Point(-9, -21);
+            ImportButton.Margin = new Padding(3, 4, 3, 4);
             ImportButton.Name = "ImportButton";
-            ImportButton.Padding = new Padding(4, 0, 0, 0);
-            ImportButton.Size = new Size(298, 87);
+            ImportButton.Padding = new Padding(5, 0, 0, 0);
+            ImportButton.Size = new Size(341, 116);
             ImportButton.TabIndex = 2;
             ImportButton.Text = "         Import File";
             ImportButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -155,9 +161,10 @@
             // pnDisplay
             // 
             pnDisplay.Controls.Add(DisplayButton);
-            pnDisplay.Location = new Point(3, 121);
+            pnDisplay.Location = new Point(3, 162);
+            pnDisplay.Margin = new Padding(3, 4, 3, 4);
             pnDisplay.Name = "pnDisplay";
-            pnDisplay.Size = new Size(279, 53);
+            pnDisplay.Size = new Size(319, 71);
             pnDisplay.TabIndex = 4;
             // 
             // DisplayButton
@@ -166,10 +173,11 @@
             DisplayButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             DisplayButton.Image = (Image)resources.GetObject("DisplayButton.Image");
             DisplayButton.ImageAlign = ContentAlignment.MiddleLeft;
-            DisplayButton.Location = new Point(-8, -16);
+            DisplayButton.Location = new Point(-9, -21);
+            DisplayButton.Margin = new Padding(3, 4, 3, 4);
             DisplayButton.Name = "DisplayButton";
-            DisplayButton.Padding = new Padding(4, 0, 0, 0);
-            DisplayButton.Size = new Size(298, 87);
+            DisplayButton.Padding = new Padding(5, 0, 0, 0);
+            DisplayButton.Size = new Size(341, 116);
             DisplayButton.TabIndex = 2;
             DisplayButton.Text = "         Display";
             DisplayButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,9 +187,10 @@
             // pnSim
             // 
             pnSim.Controls.Add(SimulationButton);
-            pnSim.Location = new Point(3, 180);
+            pnSim.Location = new Point(3, 241);
+            pnSim.Margin = new Padding(3, 4, 3, 4);
             pnSim.Name = "pnSim";
-            pnSim.Size = new Size(279, 53);
+            pnSim.Size = new Size(319, 71);
             pnSim.TabIndex = 5;
             // 
             // SimulationButton
@@ -190,10 +199,11 @@
             SimulationButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             SimulationButton.Image = (Image)resources.GetObject("SimulationButton.Image");
             SimulationButton.ImageAlign = ContentAlignment.MiddleLeft;
-            SimulationButton.Location = new Point(-8, -16);
+            SimulationButton.Location = new Point(-9, -21);
+            SimulationButton.Margin = new Padding(3, 4, 3, 4);
             SimulationButton.Name = "SimulationButton";
-            SimulationButton.Padding = new Padding(5, 0, 0, 0);
-            SimulationButton.Size = new Size(298, 87);
+            SimulationButton.Padding = new Padding(6, 0, 0, 0);
+            SimulationButton.Size = new Size(341, 116);
             SimulationButton.TabIndex = 2;
             SimulationButton.Text = "         Simulation";
             SimulationButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -203,9 +213,10 @@
             // pnHelp
             // 
             pnHelp.Controls.Add(HelpButton);
-            pnHelp.Location = new Point(3, 239);
+            pnHelp.Location = new Point(3, 320);
+            pnHelp.Margin = new Padding(3, 4, 3, 4);
             pnHelp.Name = "pnHelp";
-            pnHelp.Size = new Size(279, 53);
+            pnHelp.Size = new Size(319, 71);
             pnHelp.TabIndex = 6;
             // 
             // HelpButton
@@ -214,10 +225,11 @@
             HelpButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             HelpButton.Image = (Image)resources.GetObject("HelpButton.Image");
             HelpButton.ImageAlign = ContentAlignment.MiddleLeft;
-            HelpButton.Location = new Point(-8, -16);
+            HelpButton.Location = new Point(-9, -21);
+            HelpButton.Margin = new Padding(3, 4, 3, 4);
             HelpButton.Name = "HelpButton";
-            HelpButton.Padding = new Padding(5, 0, 0, 0);
-            HelpButton.Size = new Size(298, 87);
+            HelpButton.Padding = new Padding(6, 0, 0, 0);
+            HelpButton.Size = new Size(341, 116);
             HelpButton.TabIndex = 2;
             HelpButton.Text = "         Help";
             HelpButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -231,14 +243,15 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 511);
+            ClientSize = new Size(1125, 681);
             Controls.Add(sidebar);
             Controls.Add(pnTopBar);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Asterix Decoder";
             Load += Form1_Load;

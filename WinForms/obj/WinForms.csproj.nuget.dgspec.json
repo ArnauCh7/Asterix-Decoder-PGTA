@@ -127,6 +127,14 @@
               "target": "Package",
               "version": "[1.2.28405.11, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
             "GMap.NET.WinForms": {
               "target": "Package",
               "version": "[2.1.7, )"

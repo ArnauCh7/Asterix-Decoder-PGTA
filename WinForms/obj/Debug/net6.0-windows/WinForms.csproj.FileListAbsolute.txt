@@ -532,3 +532,4 @@ C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\Wi
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\ExcelDataReader.dll
