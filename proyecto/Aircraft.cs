@@ -15,6 +15,15 @@ namespace Project2
     {
         public string AircraftID { get; set; }
         
+        public string AircraftModel {  get; set; }
+
+        public string Estela {  get; set; }
+
+        public string PistaDesp {  get; set; }
+
+        public string SID { get; set; }
+
+        public DateTime horaDesp { get; set; }
         public List<string> LatitudeList { get; set; } = new List<string>();
         public List<string> LongitudeList { get; set; } = new List<string>();
         public List<string> Time { get; set; } = new List<string>();

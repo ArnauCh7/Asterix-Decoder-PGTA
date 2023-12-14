@@ -56,7 +56,7 @@ namespace WinForms
                 }
             }
 
-            this.aircraftList = ConvertDataTableToAircraftList(dt, "Indicativo");
+            this.aircraftList = ConvertDataTableToAircraftList(dt, "Indicativo", "TipoAeronave", "Estela", "PistaDesp", "ProcDesp", "HoraDespegue");
             
         }
 
@@ -78,21 +78,42 @@ namespace WinForms
             return sheet.ToDataTable(true);
         }
 
-        static List<Aircraft> ConvertDataTableToAircraftList(DataTable dataTable, string columnName)
+        static List<Aircraft> ConvertDataTableToAircraftList(DataTable dataTable, string IDcolumn, string modelcolumn, string estelaColumn, string pistacolumn, string SIDcolumn, string horaDespcolumn)
         {
             List<Aircraft> aircraftList = new List<Aircraft>();
 
             // Verificar si la columna existe en la DataTable
-            if (dataTable.Columns.Contains(columnName))
+            if (dataTable.Columns.Contains(IDcolumn) && dataTable.Columns.Contains(modelcolumn) && dataTable.Columns.Contains(estelaColumn) && dataTable.Columns.Contains(SIDcolumn) && dataTable.Columns.Contains(pistacolumn))
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    // Obtener el valor de la columna "Indicativo"
-                    string indicativoValue = Convert.ToString(row[columnName]);
+                    // Obtener el valor de las columnas del excel
+                    string indicativoValue = Convert.ToString(row[IDcolumn]);
+                    string modelValue = Convert.ToString(row[modelcolumn]);
+                    string estelaValue = Convert.ToString(row[estelaColumn]);
+                    string pistavalue = Convert.ToString(row[pistacolumn]);
+                    string SIDvalue = Convert.ToString(row[SIDcolumn]);
 
+                    //Variable para almacenar el resultado de la conversión
+                    DateTime horaDespValue;
+                    if (DateTime.TryParseExact(Convert.ToString(row[horaDespcolumn]), "MM/dd/yyyy H:mm:ss", null, System.Globalization.DateTimeStyles.None, out horaDespValue))
+                    {
+                        // La conversión fue exitosa, 'horaDespValue' contiene el objeto DateTime
+                        Console.WriteLine($"Fecha y hora convertidas: {horaDespValue}");
+                    }
+                    else
+                    {
+                        // La conversión falló, manejar el caso según sea necesario
+                        Console.WriteLine("Error al convertir la fecha y hora.");
+                    }
                     // Crear un nuevo objeto Aircraft y asignar el valor de AircraftID
                     Aircraft aircraft = new Aircraft();
                     aircraft.AircraftID = indicativoValue;
+                    aircraft.AircraftModel = modelValue;
+                    aircraft.Estela = estelaValue;
+                    aircraft.SID = SIDvalue;
+                    aircraft.PistaDesp = pistavalue;
+                    aircraft.horaDesp = horaDespValue;
 
                     // Agregar el objeto Aircraft a la lista
                     aircraftList.Add(aircraft);
