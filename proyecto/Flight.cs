@@ -155,19 +155,19 @@ namespace proyecto
         //Funciones para Lucas
         //// Funciones del Data_Source_Identifier
 
-        
-        
-        public string Data_Source_Identifier_SAC="";
+
+
+        public string Data_Source_Identifier_SAC = "";
         public string Data_Source_Identifier_SIC = "";
 
         public string Time_of_Day = "";
 
-        
+
 
         //// Funciones del Target_Report_Descriptor
-        string TYP="";
-        string FOEFRI="";
-     
+        string TYP = "";
+        string FOEFRI = "";
+
 
         public string Target_Report_Descriptor_TYP = "";
         public string Target_Report_Descriptor_SIM = "";
@@ -200,6 +200,10 @@ namespace proyecto
         public string Longitud = "";
         public string Height = "";
 
+        // FUnciones para Estereographic
+        public string U = "";
+        public string V = "";
+        public string H = "";
         // Funciones para el FL
         public string Flight_Level_Validation = "";
         public string Flight_Level_Garbed = "";
@@ -251,7 +255,7 @@ namespace proyecto
         {"011001", "Y"},
         {"011010", "Z"},
 
-        
+
         {"110001", "1"},
         {"110010", "2"},
         {"110011", "3"},
@@ -263,7 +267,7 @@ namespace proyecto
         {"111001", "9"},
         };
 
-       
+
         public string Decode_ID(bool b1, bool b2, bool b3, bool b4, bool b5, bool b6)
         {
             string key = ConvertBoolArrayToString(new bool[] { b1, b2, b3, b4, b5, b6 });
@@ -297,38 +301,38 @@ namespace proyecto
         {
 
             BitArray Bit_Aircraft_ID = ChangeFormat(Aircraft_ID_bytes);  //new BitArray(Aircraft_ID_bytes);
-            
+
             Separated_letters.Clear();
             string Joined_ID;
 
             for (int i = 0; i < 8; i++)
             {
-                
+
                 bool b1 = Bit_Aircraft_ID.Get(42 - (6 * i));
-                bool b2 = Bit_Aircraft_ID.Get(43 - (6 * i)); 
-                bool b3 = Bit_Aircraft_ID.Get(44 - (6 * i)); 
-                bool b4 = Bit_Aircraft_ID.Get(45 - (6 * i)); 
-                bool b5 = Bit_Aircraft_ID.Get(46 - (6 * i)); 
-                bool b6 = Bit_Aircraft_ID.Get(47 - (6 * i)); 
+                bool b2 = Bit_Aircraft_ID.Get(43 - (6 * i));
+                bool b3 = Bit_Aircraft_ID.Get(44 - (6 * i));
+                bool b4 = Bit_Aircraft_ID.Get(45 - (6 * i));
+                bool b5 = Bit_Aircraft_ID.Get(46 - (6 * i));
+                bool b6 = Bit_Aircraft_ID.Get(47 - (6 * i));
 
                 try
                 {
                     string decodedLetter = Decode_ID(b1, b2, b3, b4, b5, b6);
                     Separated_letters.Add(decodedLetter);
-                    
+
                 }
                 catch (ArgumentException ex)
                 {
                     Console.WriteLine($"Error: {ex.Message}");
                 }
-                
+
             }
             Separated_letters.Reverse();
             Joined_ID = string.Join("", Separated_letters);
-            Aircraft_ID=Joined_ID;
-            
+            Aircraft_ID = Joined_ID;
+
         }
-        
+
 
 
 
@@ -422,110 +426,110 @@ namespace proyecto
         {
 
             BitArray bitArray_First_Part = new BitArray(new byte[] { Track_Status_Bytes[0] });
-            
+
             bitArray_First_Part.Length = 8;
 
 
             if (bitArray_First_Part[7])
             {
-                CNF="Tentative Track";
+                CNF = "Tentative Track";
             }
             else
-                CNF="Confirmed Track";
+                CNF = "Confirmed Track";
 
 
             if (bitArray_First_Part[6] && bitArray_First_Part[5])
             {
-                RAD="Invalid";
+                RAD = "Invalid";
             }
             else if (bitArray_First_Part[6] == false && bitArray_First_Part[5])
             {
-                RAD="PSR Track";
+                RAD = "PSR Track";
             }
             else if (bitArray_First_Part[6] && bitArray_First_Part[5] == false)
             {
-                RAD="SSR/Mode S Track";
+                RAD = "SSR/Mode S Track";
             }
             else if (bitArray_First_Part[6] == false && bitArray_First_Part[5] == false)
             {
-                RAD="Combined Track";
+                RAD = "Combined Track";
             }
 
             if (bitArray_First_Part[4])
             {
-                DOU="Low confidence in plot to track association";
+                DOU = "Low confidence in plot to track association";
             }
             else
-                DOU="Normal confidence";
+                DOU = "Normal confidence";
 
 
             if (bitArray_First_Part[3])
             {
-                MAH="Horizontal man. sensed";
+                MAH = "Horizontal man. sensed";
             }
             else
-                MAH="No horizontal man.sensed";
+                MAH = "No horizontal man.sensed";
 
 
 
             if (bitArray_First_Part[2] && bitArray_First_Part[1])
             {
-                CDM="Unknown";
+                CDM = "Unknown";
             }
             if (bitArray_First_Part[2] == false && bitArray_First_Part[1])
             {
-                CDM="Climbing";
+                CDM = "Climbing";
             }
             if (bitArray_First_Part[2] && bitArray_First_Part[1] == false)
             {
-                CDM="Descending";
+                CDM = "Descending";
             }
             if (bitArray_First_Part[2] == false && bitArray_First_Part[1] == false)
             {
-                CDM="Maintaining";
+                CDM = "Maintaining";
             }
 
             if ((bitArray_First_Part[0]))
             {
-                FX="Extension into first extent";
+                FX = "Extension into first extent";
                 BitArray bitArray_First_Extent = new BitArray(new byte[] { Track_Status_Bytes[1] });
 
                 Reverse(bitArray_First_Extent);
 
 
                 if (bitArray_First_Extent[7])
-                    TRE="End of track lifetime(last report for this track)";
+                    TRE = "End of track lifetime(last report for this track)";
                 else
-                    TRE="Track still alive";
+                    TRE = "Track still alive";
 
                 if ((bitArray_First_Extent[6]))
-                    GHO="Ghost target track";  
+                    GHO = "Ghost target track";
                 else
-                    GHO="True target track";
+                    GHO = "True target track";
 
                 if ((bitArray_First_Extent[5]))
-                    SUP="Yes";
+                    SUP = "Yes";
                 else
-                    SUP="No";
+                    SUP = "No";
 
                 if ((bitArray_First_Extent[4]))
-                    TCC="Slant range correction and a suitable\r\nprojection technique are used to track in a\r\n2D.reference plane, tangential to the earth\r\nmodel at the Radar Site co-ordinates.\r\n";
+                    TCC = "Slant range correction and a suitable\r\nprojection technique are used to track in a\r\n2D.reference plane, tangential to the earth\r\nmodel at the Radar Site co-ordinates.\r\n";
                 else
-                    TCC="Tracking performed in so-called 'Radar\r\nPlane', i.e. neither slant range correction nor\r\nstereographical projection was applied.\r\n";
+                    TCC = "Tracking performed in so-called 'Radar\r\nPlane', i.e. neither slant range correction nor\r\nstereographical projection was applied.\r\n";
 
                 if ((bitArray_First_Extent[0]))
-                    FX2="Extension into second extent";
+                    FX2 = "Extension into second extent";
                 else
-                    FX2="End of Data Item";
+                    FX2 = "End of Data Item";
             }
             else
             {
-                FX="End of Data Item";
-                TRE="N/A";
-                GHO="N/A";
-                SUP="N/A";
-                TCC="N/A";
-                FX="N/A";
+                FX = "End of Data Item";
+                TRE = "N/A";
+                GHO = "N/A";
+                SUP = "N/A";
+                TCC = "N/A";
+                FX = "N/A";
             }
         }
 
@@ -542,110 +546,110 @@ namespace proyecto
             int COM_Value = GetIntFromBitArray(bitArray_ACAS, 14, 16);
             if (COM_Value == 0)
             {
-                ACAS_Capability_COM="No communications capability (surveillance only)";
+                ACAS_Capability_COM = "No communications capability (surveillance only)";
             }
             else if (COM_Value == 1)
             {
-                ACAS_Capability_COM="Comm. A and Comm. B capability";
+                ACAS_Capability_COM = "Comm. A and Comm. B capability";
             }
             else if (COM_Value == 2)
             {
-                ACAS_Capability_COM="Comm. A, Comm. B and Uplink ELM";
+                ACAS_Capability_COM = "Comm. A, Comm. B and Uplink ELM";
             }
             else if (COM_Value == 3)
             {
-                ACAS_Capability_COM="Comm. A, Comm. B, Uplink ELM and Downlink ELM";
+                ACAS_Capability_COM = "Comm. A, Comm. B, Uplink ELM and Downlink ELM";
             }
             else if (COM_Value == 4)
             {
-                ACAS_Capability_COM="Level 5 Transponder capability";
+                ACAS_Capability_COM = "Level 5 Transponder capability";
             }
             else
-                ACAS_Capability_COM="Not Assigned";
+                ACAS_Capability_COM = "Not Assigned";
 
             int STAT_Value = GetIntFromBitArray(bitArray_ACAS, 11, 13);
             if (STAT_Value == 0)
             {
-                ACAS_Capability_STAT="No alert, no SPI, aircraft airborne";
+                ACAS_Capability_STAT = "No alert, no SPI, aircraft airborne";
             }
             else if (STAT_Value == 1)
             {
-                ACAS_Capability_STAT="No alert, no SPI, aircraft on ground";
+                ACAS_Capability_STAT = "No alert, no SPI, aircraft on ground";
             }
             else if (STAT_Value == 2)
             {
-                ACAS_Capability_STAT="Alert, no SPI, aircraft airborne";
+                ACAS_Capability_STAT = "Alert, no SPI, aircraft airborne";
             }
             else if (STAT_Value == 3)
             {
-                ACAS_Capability_STAT="Alert, no SPI, aircraft on ground";
+                ACAS_Capability_STAT = "Alert, no SPI, aircraft on ground";
             }
             else if (STAT_Value == 4)
             {
-                ACAS_Capability_STAT="Level 5 Transponder capability";
+                ACAS_Capability_STAT = "Level 5 Transponder capability";
             }
             else if (STAT_Value == 5)
-                ACAS_Capability_STAT="No alert, SPI, aircraft airborne or on ground";
+                ACAS_Capability_STAT = "No alert, SPI, aircraft airborne or on ground";
             else if (STAT_Value == 6)
-                ACAS_Capability_STAT="Not Assigned";
+                ACAS_Capability_STAT = "Not Assigned";
             else if (STAT_Value == 7)
-                ACAS_Capability_STAT="Unknown";
+                ACAS_Capability_STAT = "Unknown";
 
 
             if (bitArray_ACAS[9])
-                ACAS_Capability_SI="II-Code Capable";
+                ACAS_Capability_SI = "II-Code Capable";
             else
-                ACAS_Capability_SI="SI-Code Capable";
+                ACAS_Capability_SI = "SI-Code Capable";
 
 
             if (bitArray_ACAS[7])
-                ACAS_Capability_MSSC="Yes";
+                ACAS_Capability_MSSC = "Yes";
             else
-                ACAS_Capability_MSSC="No";
+                ACAS_Capability_MSSC = "No";
 
             if (bitArray_ACAS[6])
-                ACAS_Capability_ARC="25ft Resolution";
+                ACAS_Capability_ARC = "25ft Resolution";
             else
-                ACAS_Capability_ARC="100ft Resolution";
+                ACAS_Capability_ARC = "100ft Resolution";
 
             if (bitArray_ACAS[5])
-                ACAS_Capability_AIC="Yes";
+                ACAS_Capability_AIC = "Yes";
             else
-                ACAS_Capability_AIC="No";
+                ACAS_Capability_AIC = "No";
 
 
 
             /// Bit 16 shall be set to ONE (1) to indicate that ACAS is operational and set to ZERO(0) to indicate that ACAS has failed or is on standby
 
             if (bitArray_ACAS[4])
-                ACAS_Capability_B1A="ACAS is Operational";
+                ACAS_Capability_B1A = "ACAS is Operational";
             else
-                ACAS_Capability_B1A="ACcas has failed or is on standby";
+                ACAS_Capability_B1A = "ACcas has failed or is on standby";
 
 
 
             if (bitArray_ACAS[3])
-                ACAS_Capability_B1B_37="capability of hybrid surveillance";
+                ACAS_Capability_B1B_37 = "capability of hybrid surveillance";
             else
-                ACAS_Capability_B1B_37="No capability of hybrid surveillance";
+                ACAS_Capability_B1B_37 = "No capability of hybrid surveillance";
 
             if (bitArray_ACAS[2])
-                ACAS_Capability_B1B_38="ACAS is generating both TAs and RAs";
+                ACAS_Capability_B1B_38 = "ACAS is generating both TAs and RAs";
             else
-                ACAS_Capability_B1B_38="ACAS is only generating TAs ";
+                ACAS_Capability_B1B_38 = "ACAS is only generating TAs ";
 
 
             if (bitArray_ACAS[1] && bitArray_ACAS[0])
-                ACAS_Capability_B1B_3940="Reserved for future versions ";
+                ACAS_Capability_B1B_3940 = "Reserved for future versions ";
 
             else if (bitArray_ACAS[1] && bitArray_ACAS[0] == false)
-                ACAS_Capability_B1B_3940="RTCA DO-185A";
+                ACAS_Capability_B1B_3940 = "RTCA DO-185A";
 
             else if (bitArray_ACAS[1] == false && bitArray_ACAS[0])
-                ACAS_Capability_B1B_3940="RTCA DO-185B";
+                ACAS_Capability_B1B_3940 = "RTCA DO-185B";
 
             else if (bitArray_ACAS[1] == false && bitArray_ACAS[0] == false)
-                ACAS_Capability_B1B_3940="RTCA DO-185";
+                ACAS_Capability_B1B_3940 = "RTCA DO-185";
 
 
         }
@@ -657,12 +661,12 @@ namespace proyecto
         /// <param name="Data_Source_ID_Bytes"></param>
         public void Set_Data_Source_Identifier(byte[] Data_Source_ID_Bytes)
         {
-            
-            Data_Source_Identifier_SAC=Convert.ToString(Data_Source_ID_Bytes[0]);
 
-            
-            
-            Data_Source_Identifier_SIC=Convert.ToString(Data_Source_ID_Bytes[1]);
+            Data_Source_Identifier_SAC = Convert.ToString(Data_Source_ID_Bytes[0]);
+
+
+
+            Data_Source_Identifier_SIC = Convert.ToString(Data_Source_ID_Bytes[1]);
         }
         /// <summary>
         /// Time of the Day, I048/140
@@ -672,9 +676,9 @@ namespace proyecto
         {
             BitArray Data_Source_ID_Bits = ChangeFormat(Data_Source_ID_Bytes);
             Reverse(Data_Source_ID_Bits);
-            double decimalValue = Convert.ToDouble( GetIntFromBitArray(Data_Source_ID_Bits, 1, 24)) / 128.0;  //Value in seconds from 00:00
-            
-            
+            double decimalValue = Convert.ToDouble(GetIntFromBitArray(Data_Source_ID_Bits, 1, 24)) / 128.0;  //Value in seconds from 00:00
+
+
             string time = TimeSpan.FromSeconds(decimalValue).ToString(@"hh\:mm\:ss\.fff");
             Time_of_Day = time;
 
@@ -724,7 +728,7 @@ namespace proyecto
                 TYP = "ModeS Roll-Call +PSR";
             }
 
-            Target_Report_Descriptor_TYP=TYP;
+            Target_Report_Descriptor_TYP = TYP;
             // SIM
             String SIM;
             if (bitArray_FirstPart[4])
@@ -734,7 +738,7 @@ namespace proyecto
             else
                 SIM = "Actual target report";
 
-            Target_Report_Descriptor_SIM=SIM;
+            Target_Report_Descriptor_SIM = SIM;
 
             //RDP
             String RDP;
@@ -745,7 +749,7 @@ namespace proyecto
             else
                 RDP = "Report from RDP Chain 1";
 
-            Target_Report_Descriptor_RDP=RDP;
+            Target_Report_Descriptor_RDP = RDP;
 
 
             //SPI
@@ -757,7 +761,7 @@ namespace proyecto
             else
                 SPI = "Absence of SPI";
 
-            Target_Report_Descriptor_SPI=SPI;
+            Target_Report_Descriptor_SPI = SPI;
 
             //RAB
             String RAB;
@@ -768,14 +772,14 @@ namespace proyecto
             else
                 RAB = "Report from aircraft transponder";
 
-            Target_Report_Descriptor_RAB=RAB;
+            Target_Report_Descriptor_RAB = RAB;
 
             //FX
             string FX;
             if (bitArray_FirstPart[0])
             {
                 FX = "Extension into first extent";
-                Target_Report_Descriptor_FX=FX;
+                Target_Report_Descriptor_FX = FX;
 
                 BitArray bitArray_FirstExtension = new BitArray(new byte[] { Target_Report_Descriptor_Bytes[1] });
                 Reverse(bitArray_FirstExtension);
@@ -790,7 +794,7 @@ namespace proyecto
                 else
                     TST = "Real target report";
 
-                Target_Report_Descriptor_TST=TST;
+                Target_Report_Descriptor_TST = TST;
 
                 //ERR
                 string ERR;
@@ -801,7 +805,7 @@ namespace proyecto
                 else
                     ERR = "No Extended Range";
 
-                Target_Report_Descriptor_ERR=ERR;
+                Target_Report_Descriptor_ERR = ERR;
 
                 //XPP
                 string XPP;
@@ -822,7 +826,7 @@ namespace proyecto
                 else
                     ME = "No Military emergency";
 
-                Target_Report_Descriptor_ME=ME;
+                Target_Report_Descriptor_ME = ME;
 
                 //MI
                 string MI;
@@ -834,7 +838,7 @@ namespace proyecto
                     MI = "No Military Identification";
 
 
-                Target_Report_Descriptor_MI=MI;
+                Target_Report_Descriptor_MI = MI;
 
                 // FOE/FRI
 
@@ -849,14 +853,14 @@ namespace proyecto
                 else if (bitArray_FirstExtension[2] == false && bitArray_FirstExtension[1])
                     FOEFRI = "Friendly target";
 
-                Target_Report_Descriptor_FOEFRI=FOEFRI;
+                Target_Report_Descriptor_FOEFRI = FOEFRI;
 
                 //FX
                 string FX2;
                 if (bitArray_FirstExtension[0])
                 {
                     FX2 = "Extension into next extent";
-                    Target_Report_Descriptor_FX2=FX2;
+                    Target_Report_Descriptor_FX2 = FX2;
                     BitArray bitArray_SecondExtension = new BitArray(new byte[] { Target_Report_Descriptor_Bytes[1] });
                     Reverse(bitArray_SecondExtension);
 
@@ -869,7 +873,7 @@ namespace proyecto
                     }
                     else
                         ADSBEP = "ADSB not populated";
-                    Target_Report_Descriptor_ADSBEP=ADSBEP;
+                    Target_Report_Descriptor_ADSBEP = ADSBEP;
 
                     //ADSBVAL
                     string ADSBVAL;
@@ -881,7 +885,7 @@ namespace proyecto
                     else
                         ADSBVAL = "Information not available";
 
-                    Target_Report_Descriptor_ADSBVAL=ADSBVAL;
+                    Target_Report_Descriptor_ADSBVAL = ADSBVAL;
 
                     //SCN EP
                     string SCNEP;
@@ -893,7 +897,7 @@ namespace proyecto
                     else
                         SCNEP = "SCN not populated";
 
-                    Target_Report_Descriptor_SCNEP=SCNEP;
+                    Target_Report_Descriptor_SCNEP = SCNEP;
                     //SCN VAL
                     string SCNVAL;
                     if (bitArray_SecondExtension[4])
@@ -904,7 +908,7 @@ namespace proyecto
                     else
                         SCNVAL = "Surveillance Cluster Network Information not available";
 
-                    Target_Report_Descriptor_SCNVAL=SCNVAL;
+                    Target_Report_Descriptor_SCNVAL = SCNVAL;
                     //`PAI EP
                     string PAIEP;
                     if (bitArray_SecondExtension[3])
@@ -915,7 +919,7 @@ namespace proyecto
                     else
                         PAIEP = "PAI not populated";
 
-                    Target_Report_Descriptor_PAIEP=PAIEP;
+                    Target_Report_Descriptor_PAIEP = PAIEP;
 
                     //SCN VAL
                     string PAIVAL;
@@ -927,19 +931,19 @@ namespace proyecto
                     else
                         PAIVAL = "Passive Acquisition Interface Information not available";
 
-                    Target_Report_Descriptor_PAIVAL=PAIVAL;
+                    Target_Report_Descriptor_PAIVAL = PAIVAL;
 
                     // FX3
                     string FX3;
                     if (bitArray_SecondExtension[0])
                     {
                         FX3 = "Extension into next extent";
-                        Target_Report_Descriptor_FX3=FX3;
+                        Target_Report_Descriptor_FX3 = FX3;
                     }
                     else
                     {
                         FX3 = "End of Data Item";
-                        Target_Report_Descriptor_FX3=FX3;
+                        Target_Report_Descriptor_FX3 = FX3;
                     }
 
 
@@ -952,14 +956,14 @@ namespace proyecto
                 else
                 {
                     FX2 = "End of Data Item";
-                    Target_Report_Descriptor_FX2=FX2;
-                    Target_Report_Descriptor_ADSBEP="N/A";
-                    Target_Report_Descriptor_ADSBVAL="N/A";
-                    Target_Report_Descriptor_SCNEP="N/A";
-                    Target_Report_Descriptor_SCNVAL="N/A";
-                    Target_Report_Descriptor_PAIEP="N/A";
-                    Target_Report_Descriptor_PAIVAL="N/A";
-                    Target_Report_Descriptor_FX3="N/A";
+                    Target_Report_Descriptor_FX2 = FX2;
+                    Target_Report_Descriptor_ADSBEP = "N/A";
+                    Target_Report_Descriptor_ADSBVAL = "N/A";
+                    Target_Report_Descriptor_SCNEP = "N/A";
+                    Target_Report_Descriptor_SCNVAL = "N/A";
+                    Target_Report_Descriptor_PAIEP = "N/A";
+                    Target_Report_Descriptor_PAIVAL = "N/A";
+                    Target_Report_Descriptor_FX3 = "N/A";
 
                 }
 
@@ -970,21 +974,21 @@ namespace proyecto
             else
             {
                 FX = "End of Data Item";
-                Target_Report_Descriptor_FX=FX;
-                Target_Report_Descriptor_FX2="N/A";
-                Target_Report_Descriptor_ADSBEP="N/A";
-                Target_Report_Descriptor_ADSBVAL="N/A";
-                Target_Report_Descriptor_SCNEP="N/A";
-                Target_Report_Descriptor_SCNVAL="N/A";
-                Target_Report_Descriptor_PAIEP="N/A";
-                Target_Report_Descriptor_PAIVAL="N/A";
-                Target_Report_Descriptor_FX3="N/A";
-                Target_Report_Descriptor_XPP="N/A";
-                Target_Report_Descriptor_ME="N/A";
-                Target_Report_Descriptor_MI="N/A";
-                Target_Report_Descriptor_FOEFRI="N/A";
-                Target_Report_Descriptor_TST="N/A";
-                Target_Report_Descriptor_ERR="N/A";
+                Target_Report_Descriptor_FX = FX;
+                Target_Report_Descriptor_FX2 = "N/A";
+                Target_Report_Descriptor_ADSBEP = "N/A";
+                Target_Report_Descriptor_ADSBVAL = "N/A";
+                Target_Report_Descriptor_SCNEP = "N/A";
+                Target_Report_Descriptor_SCNVAL = "N/A";
+                Target_Report_Descriptor_PAIEP = "N/A";
+                Target_Report_Descriptor_PAIVAL = "N/A";
+                Target_Report_Descriptor_FX3 = "N/A";
+                Target_Report_Descriptor_XPP = "N/A";
+                Target_Report_Descriptor_ME = "N/A";
+                Target_Report_Descriptor_MI = "N/A";
+                Target_Report_Descriptor_FOEFRI = "N/A";
+                Target_Report_Descriptor_TST = "N/A";
+                Target_Report_Descriptor_ERR = "N/A";
             }
 
 
@@ -1001,14 +1005,14 @@ namespace proyecto
         {
             BitArray bitArray_Measured_Position = ChangeFormat(Measured_Position_in_Polar_Coordinates_bytes); //new BitArray(Measured_Position_in_Polar_Coordinates_bytes);
             Reverse(bitArray_Measured_Position);
-            float  Decimal_Rho = GetIntFromBitArray(bitArray_Measured_Position, 17, 32);
-            float  Decimal_Theta = GetIntFromBitArray(bitArray_Measured_Position, 1, 16);
+            float Decimal_Rho = GetIntFromBitArray(bitArray_Measured_Position, 17, 32);
+            float Decimal_Theta = GetIntFromBitArray(bitArray_Measured_Position, 1, 16);
 
-            double Rho_Value = Decimal_Rho/256;
-            double Theta_Value = 360 * Decimal_Theta/(Math.Pow(2, 16));
+            double Rho_Value = Decimal_Rho / 256;
+            double Theta_Value = 360 * Decimal_Theta / (Math.Pow(2, 16));
 
-            Measured_Position_in_Polar_Coordinates_RHO=Convert.ToString(Rho_Value);
-            Measured_Position_in_Polar_Coordinates_THETA=Convert.ToString(Theta_Value);
+            Measured_Position_in_Polar_Coordinates_RHO = Convert.ToString(Rho_Value);
+            Measured_Position_in_Polar_Coordinates_THETA = Convert.ToString(Theta_Value);
 
 
 
@@ -1026,25 +1030,26 @@ namespace proyecto
             BitArray bitarray_Flight_Level = ChangeFormat(FL_bytes);//new BitArray(FL_bytes);
             Reverse(bitarray_Flight_Level);
 
-            if (bitarray_Flight_Level[15]) {
+            if (bitarray_Flight_Level[15])
+            {
 
-                Flight_Level_Validation="Code not Validated";
+                Flight_Level_Validation = "Code not Validated";
             }
             else
-                Flight_Level_Validation="Code Validated";
+                Flight_Level_Validation = "Code Validated";
 
             if (bitarray_Flight_Level[14])
             {
 
-                Flight_Level_Garbed="Garbled Code";
+                Flight_Level_Garbed = "Garbled Code";
             }
             else
-                Flight_Level_Garbed="Default";
+                Flight_Level_Garbed = "Default";
 
             BitArray bitarray_FL = SelectRangeFromBitArray(bitarray_Flight_Level, 0, 13);
             Reverse(bitarray_FL);
             double value = BitArrayToDecimalTwosComplement(bitarray_FL) / 4.0;
-            Flight_Level_Value=Convert.ToString(value);
+            Flight_Level_Value = Convert.ToString(value);
 
 
         }
@@ -1058,19 +1063,19 @@ namespace proyecto
         /// <exception cref="ArgumentException"></exception>
         public void Set_Aircraft_Address(byte[] Aircraft_Address_Bytes)
         {
-            BitArray Aircraft_Addres_Bits= ChangeFormat(Aircraft_Address_Bytes);
+            BitArray Aircraft_Addres_Bits = ChangeFormat(Aircraft_Address_Bytes);
             byte[] Reversed_Aircraft_Address_Bytes = BitArrayToByteArray(Aircraft_Addres_Bits);
             // Make sure the input byte array is exactly 3 bytes (24 bits).
             if (Reversed_Aircraft_Address_Bytes.Length != 3)
             {
                 throw new ArgumentException("Input byte array must be 3 bytes (24 bits) long.");
             }
-            
+
             // Convert the byte array to a hexadecimal string.
             string hexString = BitConverter.ToString(Reversed_Aircraft_Address_Bytes).Replace("-", "");
 
             // The hexString variable now contains the hexadecimal representation.
-            Aircraft_Address=hexString;
+            Aircraft_Address = hexString;
         }
 
 
@@ -1111,19 +1116,19 @@ namespace proyecto
             Reverse(bitarray_Aircraft_Mode_3A);
 
             if (bitarray_Aircraft_Mode_3A[15])
-                Mode_3A_V="Code not validated";
+                Mode_3A_V = "Code not validated";
             else
-                Mode_3A_V="Code  validated";
+                Mode_3A_V = "Code  validated";
 
             if (bitarray_Aircraft_Mode_3A[14])
-                Mode_3A_G="Garbled Code";
+                Mode_3A_G = "Garbled Code";
             else
-                Mode_3A_G="Default";
+                Mode_3A_G = "Default";
 
             if (bitarray_Aircraft_Mode_3A[13])
-                Mode_3A_L="Mode-3/A code not extracted during the last scan";
+                Mode_3A_L = "Mode-3/A code not extracted during the last scan";
             else
-                Mode_3A_L="Mode-3/A code derived from the reply of the transponder";
+                Mode_3A_L = "Mode-3/A code derived from the reply of the transponder";
 
             //Falta los valores en OCTAL
 
@@ -1132,7 +1137,7 @@ namespace proyecto
             int thirddigit = GetIntFromBitArray(bitarray_Aircraft_Mode_3A, 4, 6);
             int fourthdigit = GetIntFromBitArray(bitarray_Aircraft_Mode_3A, 1, 3);
             string code = Convert.ToString(firstdigit) + Convert.ToString(secondgiti) + Convert.ToString(thirddigit) + Convert.ToString(fourthdigit);
-            Mode_3A_Reply=code;
+            Mode_3A_Reply = code;
         }
 
 
@@ -1144,10 +1149,10 @@ namespace proyecto
         /// <param name="Aircraft_Track_number_bytes"></param>
         public void Set_Track_Number(byte[] Aircraft_Track_number_bytes)
         {
-            BitArray Bits_Track_number = ChangeFormat(Aircraft_Track_number_bytes) ;//new BitArray(Aircraft_Track_number_bytes)
-            Reverse(Bits_Track_number) ;
+            BitArray Bits_Track_number = ChangeFormat(Aircraft_Track_number_bytes);//new BitArray(Aircraft_Track_number_bytes)
+            Reverse(Bits_Track_number);
             int value = GetIntFromBitArray(Bits_Track_number, 1, 12);
-            Track_Number=Convert.ToString(value);
+            Track_Number = Convert.ToString(value);
         }
 
 
@@ -1163,8 +1168,8 @@ namespace proyecto
             Reverse(Bits_Calculated_Position);
             double X_comp = GetIntFromBitArray(Bits_Calculated_Position, 17, 32) / 128;
             double Y_comp = GetIntFromBitArray(Bits_Calculated_Position, 1, 16) / 128;
-            Calculated_Position_Cartesian_X=Convert.ToString(X_comp);
-            Calculated_Position_Cartesian_Y=Convert.ToString(Y_comp);
+            Calculated_Position_Cartesian_X = Convert.ToString(X_comp);
+            Calculated_Position_Cartesian_Y = Convert.ToString(Y_comp);
         }
 
 
@@ -1176,10 +1181,10 @@ namespace proyecto
         /// <param name="Aircraft_Track_Velocity_Bytes"></param>
         public void Set_Aircraft_Track_Velocity(byte[] Aircraft_Track_Velocity_Bytes)
         {
-            BitArray Bits_Aircraft_Track_Velocity =ChangeFormat(Aircraft_Track_Velocity_Bytes); //new BitArray(Aircraft_Track_Velocity_Bytes);
+            BitArray Bits_Aircraft_Track_Velocity = ChangeFormat(Aircraft_Track_Velocity_Bytes); //new BitArray(Aircraft_Track_Velocity_Bytes);
             Reverse(Bits_Aircraft_Track_Velocity);
             Calculated_Track_Velocity_Polar_GroundSpeed = Convert.ToString(GetIntFromBitArray(Bits_Aircraft_Track_Velocity, 17, 32) * 0.22);//Math.Pow(2, -14)*7200/2);
-            Calculated_Track_Velocity_Polar_Heading=Convert.ToString(GetIntFromBitArray(Bits_Aircraft_Track_Velocity, 1, 16) * 360 * Math.Pow(2, -16));
+            Calculated_Track_Velocity_Polar_Heading = Convert.ToString(GetIntFromBitArray(Bits_Aircraft_Track_Velocity, 1, 16) * 360 * Math.Pow(2, -16));
         }
 
 
@@ -1191,7 +1196,7 @@ namespace proyecto
         {
             BitArray Bits_Height_Measured = ChangeFormat(Height_Measured_Bytes);//new BitArray(Height_Measured_Bytes);
             double value = GetIntFromBitArray(Bits_Height_Measured, 1, 14) * 25;
-            Height_Measured_by_3D_Radar=Convert.ToString(value);
+            Height_Measured_by_3D_Radar = Convert.ToString(value);
 
         }
 
@@ -1205,36 +1210,36 @@ namespace proyecto
 
             BitArray Bits_Radar = ChangeFormat(Radar_Plot_Characteristics_); //new BitArray(Radar_Plot_Characteristics_);
             Reverse(Bits_Radar);
-            
-            double  SRl_value;
+
+            double SRl_value;
             double SRR_Value;
             int messagecount = 1;
             int message_type = 8;
             int Superior_RAnge;
             int Inferior_Range;
-            for (int i = Bits_Radar.Length; i > Bits_Radar.Length-7; i--)
+            for (int i = Bits_Radar.Length; i > Bits_Radar.Length - 7; i--)
             {
-                
-                bool Estado_Subfield = Bits_Radar[i-1];
+
+                bool Estado_Subfield = Bits_Radar[i - 1];
                 if (Estado_Subfield)
                 {
-                    
+
 
                     // Obtenemos los limites superiores e inferiores del octeto correspondiente (Varia segun van avanzando los mesnajes)
                     Superior_RAnge = Bits_Radar.Length - 8 * messagecount;
-                    Inferior_Range = 1+(Bits_Radar.Length - 8 * (messagecount+1));
+                    Inferior_Range = 1 + (Bits_Radar.Length - 8 * (messagecount + 1));
 
                     // Si es SRL
-                    if(message_type==8)
+                    if (message_type == 8)
                     {
-                        SRl_value = GetIntFromBitArray(Bits_Radar, Inferior_Range, Superior_RAnge)*2* 360/Math.Pow(2, 14);
-                        SRL=Convert.ToString(SRl_value);
+                        SRl_value = GetIntFromBitArray(Bits_Radar, Inferior_Range, Superior_RAnge) * 2 * 360 / Math.Pow(2, 14);
+                        SRL = Convert.ToString(SRl_value);
                     }
                     // Si es SSR
-                    if(message_type==7) 
+                    if (message_type == 7)
                     {
-                        SRR_Value= GetIntFromBitArray(Bits_Radar, Inferior_Range, Superior_RAnge);
-                        SSR=Convert.ToString(SRR_Value);
+                        SRR_Value = GetIntFromBitArray(Bits_Radar, Inferior_Range, Superior_RAnge);
+                        SSR = Convert.ToString(SRR_Value);
                     }
 
                     //Si es SAM
@@ -1243,19 +1248,19 @@ namespace proyecto
                         BitArray SAM_Array = new BitArray(new byte[] { Radar_Plot_Characteristics_[3] });
                         Reverse(SAM_Array);
                         int amplitudeValue = BitArrayToDecimalTwosComplement(SAM_Array);
-                        SAM=Convert.ToString(amplitudeValue);
+                        SAM = Convert.ToString(amplitudeValue);
 
-                        
+
 
                     }
                     // Si es PRL
-                    if (message_type==5)
+                    if (message_type == 5)
                     {
                         double PRL_Value = GetIntFromBitArray(Bits_Radar, Inferior_Range, Superior_RAnge) * 360 / Math.Pow(2, 13);
-                        PRL=Convert.ToString(PRL_Value);
+                        PRL = Convert.ToString(PRL_Value);
                     }
                     // Si es PAM
-                    if(message_type == 4)
+                    if (message_type == 4)
                     {
                         // Check the sign bit (bit 8)
                         bool isNegative = Bits_Radar[Superior_RAnge - 1] == true;
@@ -1278,7 +1283,7 @@ namespace proyecto
                         {
                             amplitudeValue = -((1 << 7) - amplitudeValue);
                         }
-                        PAM=Convert.ToString(amplitudeValue);
+                        PAM = Convert.ToString(amplitudeValue);
                     }
                     // Si es RPD
                     if (message_type == 3)
@@ -1309,9 +1314,9 @@ namespace proyecto
                         double lsb = 1.0 / 256.0;
 
 
-                        double RDP =rangeDifference * lsb;
+                        double RDP = rangeDifference * lsb;
 
-                        RPD=Convert.ToString(RDP);
+                        RPD = Convert.ToString(RDP);
 
                     }
 
@@ -1344,7 +1349,7 @@ namespace proyecto
                         double lsb = 360.0 / Math.Pow(2, 14);
                         double APD_value = azimuthDifference * lsb;
 
-                        APD=Convert.ToString(APD_value);
+                        APD = Convert.ToString(APD_value);
                     }
 
 
@@ -1355,36 +1360,36 @@ namespace proyecto
                 //If the subfield is not avaiable It is added in the list as N/A
                 else
                 {
-                    
+
                     if (message_type == 8)
-                        SRL="N/A";
+                        SRL = "N/A";
                     if (message_type == 7)
                     {
-                        SSR="N/A";
+                        SSR = "N/A";
                     }
                     if (message_type == 6)
                     {
-                        SAM="N/A";
+                        SAM = "N/A";
                     }
 
                     if (message_type == 5)
                     {
-                        PRL="N/A";
+                        PRL = "N/A";
                     }
 
                     if (message_type == 4)
                     {
-                        PAM="N/A";
+                        PAM = "N/A";
                     }
 
                     if (message_type == 3)
                     {
-                        RPD="N/A";
+                        RPD = "N/A";
                     }
 
                     if (message_type == 2)
                     {
-                        APD="N/A";
+                        APD = "N/A";
                     }
 
 
@@ -1392,12 +1397,12 @@ namespace proyecto
                 }
 
 
-                    
 
-                
+
+
 
             }
-               
+
         }
 
 
@@ -1418,13 +1423,13 @@ namespace proyecto
             bool FourUsed = false;
             bool FiveUsed = false;
             bool SixUsed = false;
-            string Messages_types="";
+            string Messages_types = "";
 
             for (int i = 1; i <= Message_Number; i++)
             {
-                string BDSAddress = GetBDSAddress(BDSRegisterData, i-1);
-                Messages_types=Messages_types+" "+ BDSAddress;
-                byte[] SelectedRange = GetSelectedRange(BDSRegisterData, i-1);
+                string BDSAddress = GetBDSAddress(BDSRegisterData, i - 1);
+                Messages_types = Messages_types + " " + BDSAddress;
+                byte[] SelectedRange = GetSelectedRange(BDSRegisterData, i - 1);
                 BitArray BDSDataOctets = ChangeFormat(SelectedRange);//new BitArray(SelectedRange);
                 Reverse(BDSDataOctets);
 
@@ -1444,10 +1449,10 @@ namespace proyecto
                     SixUsed = true;
                 }
             }
-            BDS_Number=Messages_types;
+            BDS_Number = Messages_types;
             FillMissingValues(FourUsed, FiveUsed, SixUsed);
         }
-        
+
         private void FillMissingValues(bool FourUsed, bool FiveUsed, bool SixUsed)
         {
             if (!FourUsed)
@@ -1491,51 +1496,51 @@ namespace proyecto
         private void HandleMessageType4(BitArray BDS_Data_Octets)
         {
             // Handle type 4 messages
-            Selected_Alt=Convert.ToString(GetIntFromBitArray(BDS_Data_Octets, 44, 55) * 16);
-            Selected_Alt_FMS=Convert.ToString(GetIntFromBitArray(BDS_Data_Octets, 31, 42) * 16);
-            Barometric_Pressure=Convert.ToString((GetIntFromBitArray(BDS_Data_Octets, 18, 29) * 0.1)+800) ;
+            Selected_Alt = Convert.ToString(GetIntFromBitArray(BDS_Data_Octets, 44, 55) * 16);
+            Selected_Alt_FMS = Convert.ToString(GetIntFromBitArray(BDS_Data_Octets, 31, 42) * 16);
+            Barometric_Pressure = Convert.ToString((GetIntFromBitArray(BDS_Data_Octets, 18, 29) * 0.1) + 800);
 
             if (BDS_Data_Octets[8])
-                Status_MCP_FCU_Bits="Mode information deliberately provided";
+                Status_MCP_FCU_Bits = "Mode information deliberately provided";
             else
-                Status_MCP_FCU_Bits=" No mode information provided";
+                Status_MCP_FCU_Bits = " No mode information provided";
 
 
             if (BDS_Data_Octets[7])
-                VNAV_Mode="Active";
+                VNAV_Mode = "Active";
             else
-                VNAV_Mode="Not Active";
+                VNAV_Mode = "Not Active";
 
             if (BDS_Data_Octets[6])
-                ALT_HOLD_MODE="Active";
+                ALT_HOLD_MODE = "Active";
             else
-                ALT_HOLD_MODE="Not Active";
+                ALT_HOLD_MODE = "Not Active";
 
             if (BDS_Data_Octets[5])
-                APPROACH_MODE="Active";
+                APPROACH_MODE = "Active";
             else
-                APPROACH_MODE="Not Active";
+                APPROACH_MODE = "Not Active";
 
 
             if (BDS_Data_Octets[2])
-                Status_Target_Alt_Bits="Source information deliberately provided";
+                Status_Target_Alt_Bits = "Source information deliberately provided";
             else
-                Status_Target_Alt_Bits="No source information provided";
+                Status_Target_Alt_Bits = "No source information provided";
 
 
 
             //TARGET ALT SOURCE
             if (BDS_Data_Octets[1] && BDS_Data_Octets[0])
-                Target_Alt_Source="FMS selected altitude";
+                Target_Alt_Source = "FMS selected altitude";
 
             if (BDS_Data_Octets[1] && BDS_Data_Octets[0] == false)
-                Target_Alt_Source="FCU/MCP selected altitude";
+                Target_Alt_Source = "FCU/MCP selected altitude";
 
             if (BDS_Data_Octets[1] == false && BDS_Data_Octets[0])
-                Target_Alt_Source="Aircraft altitude";
+                Target_Alt_Source = "Aircraft altitude";
 
             if (BDS_Data_Octets[1] == false && BDS_Data_Octets[0] == false)
-                Target_Alt_Source="Unknown";
+                Target_Alt_Source = "Unknown";
         }
 
         private void HandleMessageType5(BitArray BDS_Data_Octets)
@@ -1544,29 +1549,29 @@ namespace proyecto
             // STATUS
             if (BDS_Data_Octets[55])
             {
-                Status="Latitude,Longitud and FOM are Valid";
+                Status = "Latitude,Longitud and FOM are Valid";
             }
             else
-                Status="Latitude,Longitud and FOM are NOT Valid";
+                Status = "Latitude,Longitud and FOM are NOT Valid";
 
             // LEFT WING
             if (BDS_Data_Octets[54])
             {
-                Left_Wing="Left Wing Down";
+                Left_Wing = "Left Wing Down";
             }
             else
-                Left_Wing="Left Wing UP";
+                Left_Wing = "Left Wing UP";
             // ROll Angle
 
             //bool[] Roll_Angle_Data = {BDS_Data_Octets[53], BDS_Data_Octets[52], BDS_Data_Octets[51], BDS_Data_Octets[50], BDS_Data_Octets[49], BDS_Data_Octets[48], BDS_Data_Octets[47], BDS_Data_Octets[46], BDS_Data_Octets[45] };// Lo ordenamos donde el MSB esta mas a la derecha
-            
+
             BitArray arrais = SelectRangeFromBitArray(BDS_Data_Octets, 45, 53);
 
             // source,source-index,dest,dest-index,count
             Reverse(arrais);
             int decimalValue = BitArrayToDecimalTwosComplement(arrais);
             double Roll_Angle_Value_int = decimalValue * 45.0 / 256;
-            Roll_Angle_Value=Convert.ToString(Roll_Angle_Value_int);
+            Roll_Angle_Value = Convert.ToString(Roll_Angle_Value_int);
 
             // TRUE TRACK ANGLE
             bool[] True_Track_Data = { BDS_Data_Octets[43], BDS_Data_Octets[42], BDS_Data_Octets[41], BDS_Data_Octets[40], BDS_Data_Octets[39], BDS_Data_Octets[38], BDS_Data_Octets[37], BDS_Data_Octets[36], BDS_Data_Octets[35], BDS_Data_Octets[34] };// Lo ordenamos donde el MSB esta mas a la derecha
@@ -1574,12 +1579,12 @@ namespace proyecto
             Reverse(bitArray_True_Track_Data);
             double Valor_Decimal = BitArrayToDecimalTwosComplement(bitArray_True_Track_Data) * 90.0 / 512;
 
-            True_Track_Angle=Convert.ToString(Valor_Decimal);
+            True_Track_Angle = Convert.ToString(Valor_Decimal);
 
             //GROUND SPEED de la posicion  32 a 24
             BitArray GS = SelectRangeFromBitArray(BDS_Data_Octets, 22, 31);
-            double  valor_GS = GetIntFromBitArray(GS, 1, 10) * 1024.0 / 512;
-            Ground_Speed=Convert.ToString(valor_GS);
+            double valor_GS = GetIntFromBitArray(GS, 1, 10) * 1024.0 / 512;
+            Ground_Speed = Convert.ToString(valor_GS);
 
             //TRACK ANGLE RATE
 
@@ -1587,11 +1592,11 @@ namespace proyecto
             BitArray bitArray_Track_Angle_Data = SelectRangeFromBitArray(BDS_Data_Octets, 12, 22);
             //Reverse(bitArray_Track_Angle_Data);
             double Valor = BitArrayToDecimalTwosComplement(bitArray_Track_Angle_Data) * 8.0 / 256;
-            Track_Angle_Rate=Convert.ToString(Valor);
+            Track_Angle_Rate = Convert.ToString(Valor);
 
             //TRUE AIRSPEED
             int valor_AS = GetIntFromBitArray(BDS_Data_Octets, 1, 10) * 2;
-            True_Airspeed=Convert.ToString(valor_AS);
+            True_Airspeed = Convert.ToString(valor_AS);
 
         }
 
@@ -1603,31 +1608,31 @@ namespace proyecto
             BitArray bitArray = SelectRangeFromBitArray(BDS_Data_Octets, 44, 54);
             Reverse(bitArray);
             int decimalValue = BitArrayToDecimalTwosComplement(bitArray);
-            double  Magnetic_Heading_int = decimalValue * 90.0 / 512;
-            Magnetic_Heading=Convert.ToString(Magnetic_Heading_int);
-            
+            double Magnetic_Heading_int = decimalValue * 90.0 / 512;
+            Magnetic_Heading = Convert.ToString(Magnetic_Heading_int);
+
 
 
             // IAS 44-35
-            bool[] IAS_data = { BDS_Data_Octets[44],BDS_Data_Octets[43], BDS_Data_Octets[42], BDS_Data_Octets[41], BDS_Data_Octets[40], BDS_Data_Octets[39], BDS_Data_Octets[38], BDS_Data_Octets[37], BDS_Data_Octets[36], BDS_Data_Octets[35] };// Lo ordenamos donde el MSB esta mas a la derecha
+            bool[] IAS_data = { BDS_Data_Octets[44], BDS_Data_Octets[43], BDS_Data_Octets[42], BDS_Data_Octets[41], BDS_Data_Octets[40], BDS_Data_Octets[39], BDS_Data_Octets[38], BDS_Data_Octets[37], BDS_Data_Octets[36], BDS_Data_Octets[35] };// Lo ordenamos donde el MSB esta mas a la derecha
             BitArray DData = SelectRangeFromBitArray(BDS_Data_Octets, 33, 42);
-            
+
             int IAS_Value = GetIntFromBitArray(DData, 1, 10);
-            Indicated_AS=Convert.ToString(IAS_Value);
+            Indicated_AS = Convert.ToString(IAS_Value);
 
             // MACH posicion 32-25
             bitArray = SelectRangeFromBitArray(BDS_Data_Octets, 22, 31);
             double MACH_Value = GetIntFromBitArray(bitArray, 1, 9) * 2.048 / 512;
-            MACH=Convert.ToString(MACH_Value);
+            MACH = Convert.ToString(MACH_Value);
 
             // Barometric Altitude Rate 23-14
             bool[] Barometric_Altitude_Data = { BDS_Data_Octets[20], BDS_Data_Octets[19], BDS_Data_Octets[18], BDS_Data_Octets[17], BDS_Data_Octets[16], BDS_Data_Octets[15], BDS_Data_Octets[14], BDS_Data_Octets[13], BDS_Data_Octets[12], BDS_Data_Octets[11] };// Lo ordenamos donde el MSB esta mas a la derecha
-            bitArray =  SelectRangeFromBitArray(BDS_Data_Octets, 11, 20);
+            bitArray = SelectRangeFromBitArray(BDS_Data_Octets, 11, 20);
             Reverse(bitArray);
             decimalValue = BitArrayToDecimalTwosComplement(bitArray);
 
             int Barometric_Altitude_Data_int = decimalValue * 8192 / 256;
-            Barometric_Altitude_Rate=Convert.ToString(Barometric_Altitude_Data_int);
+            Barometric_Altitude_Rate = Convert.ToString(Barometric_Altitude_Data_int);
 
             //INERTIAL VERTICAL VELOCITY
 
@@ -1636,7 +1641,7 @@ namespace proyecto
             Reverse(bitArray);
             decimalValue = BitArrayToDecimalTwosComplement(bitArray);
             int Inertial_Vertical_Velocity_data_int = decimalValue * 8192 / 256;
-            Inertial_Vertical_Velocity=Convert.ToString(Inertial_Vertical_Velocity_data_int);
+            Inertial_Vertical_Velocity = Convert.ToString(Inertial_Vertical_Velocity_data_int);
         }
 
         private string GetBDSAddress(byte[] BDS_Register_Data, int index)
@@ -1644,12 +1649,12 @@ namespace proyecto
 
             // Implement logic to extract BDS address
             BitArray BDS_Address_Octet = new BitArray(new byte[] { BDS_Register_Data[(index * 8) + 8] });
-            
-            
+
+
             int BDS1 = GetIntFromBitArray(BDS_Address_Octet, 5, 8);
             int BDS2 = GetIntFromBitArray(BDS_Address_Octet, 1, 4);
             string BDS_Address = Convert.ToString(BDS1) + "," + Convert.ToString(BDS2);
-            
+
             return BDS_Address;
         }
 
@@ -1678,7 +1683,7 @@ namespace proyecto
 
         }
 
-        
+
 
 
         static int GetIntFromBitArray(BitArray bitArray, int bit_start, int bit_end)
@@ -1720,14 +1725,14 @@ namespace proyecto
 
         public void Set_NA_DataSource()
         {
-            Data_Source_Identifier_SAC="N/A";
-            Data_Source_Identifier_SIC="N/A";
+            Data_Source_Identifier_SAC = "N/A";
+            Data_Source_Identifier_SIC = "N/A";
         }
 
 
         public void Set_NA_TimeofDay()
         {
-            Time_of_Day="N/A";
+            Time_of_Day = "N/A";
 
         }
 
@@ -1878,11 +1883,11 @@ namespace proyecto
             ACAS_Capability_STAT = "N/A";
         }
 
-        
-public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List<BitArray> FspecList)
+
+        public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List<BitArray> FspecList)
         {
             int MessagesLen = 0;
-            
+
             foreach (BitArray fspec in FspecList)
             {
                 int CounterForMessage = 0;
@@ -1893,7 +1898,7 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
                     CounterForMessage += 1;
                 }
                 else { Set_NA_DataSource(); }
-                
+
 
                 if (fspec[1])
                 {
@@ -2006,7 +2011,7 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
                         Set_NA_Height_Measured();
                         Set_NA_Communications_ACAS_Capability();
                     }
-                    
+
                 }
                 else
                 {
@@ -2022,14 +2027,14 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
                 double h = Convert.ToDouble(Flight_Level_Value);
                 if (h < 60)
                 {
-                    if (Barometric_Pressure !="N/A")
+                    if (Barometric_Pressure != "N/A")
                     {
                         double Altitud_real = h + (Convert.ToDouble(Barometric_Pressure) - 1013.25) * 30;
                         Corrected_FL = Convert.ToString(Altitud_real);
                     }
                     else
                     {
-                        Corrected_FL = Convert.ToString(h*100);
+                        Corrected_FL = "N/A";
                     }
                 }
 
@@ -2088,21 +2093,21 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
         }
         static BitArray ChangeFormat(byte[] data)
         {
-            
-            BitArray AllBits=new BitArray(new byte[] { data[0] });
+
+            BitArray AllBits = new BitArray(new byte[] { data[0] });
             Reverse(AllBits);
-            int j= 1;
-            while(j<data.Length)
+            int j = 1;
+            while (j < data.Length)
             {
-                BitArray SavedBitarray=new BitArray(new byte[] { data[j] });
+                BitArray SavedBitarray = new BitArray(new byte[] { data[j] });
                 Reverse(SavedBitarray);
-                AllBits=ConcatenateBitArrays(AllBits, SavedBitarray);
+                AllBits = ConcatenateBitArrays(AllBits, SavedBitarray);
                 j++;
             }
             return AllBits;
         }
 
-        public BitArray SelectRangeFromBitArray(BitArray array,int inicio,int final)
+        public BitArray SelectRangeFromBitArray(BitArray array, int inicio, int final)
         {
             // Define the range you want to copy
             int startIndex = inicio;
@@ -2126,19 +2131,24 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
         {
             GeoUtils GeoUtils = new GeoUtils();
             double Height_m;
+            double height_radar_tang = 3438.954;
+            double Lat_deg_tang = 41.065656 * GeoUtils.DEGS2RADS;
+            double Lon_deg_tang = 1.413301 * GeoUtils.DEGS2RADS;
+            CoordinatesWGS84 system_center_tang = new CoordinatesWGS84(Lat_deg_tang, Lon_deg_tang, height_radar_tang);
+            GeoUtils.setCenterProjection(system_center_tang);
             if (Flight_Level_Value != "N/A")
             {
                 if (Corrected_FL != "")
                 {
                     Height_m = Convert.ToDouble(Corrected_FL) * 0.3048;
                 }
-                else Height_m=Convert.ToDouble(Flight_Level_Value)*100* 0.3048; 
+                else Height_m = Convert.ToDouble(Flight_Level_Value) * 100 * 0.3048;
 
             }
             else
             {
                 Height_m = 0;
-               
+
             }
             CoordinatesWGS84 RadarCoordinates = new CoordinatesWGS84((0.720833), (0.036688));
             double RHO_m = Convert.ToDouble(this.Measured_Position_in_Polar_Coordinates_RHO) * 1852;
@@ -2152,18 +2162,22 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
 
             CoordinatesXYZ Geocentric_Coordinates = GeoUtils.change_radar_cartesian2geocentric(RadarCoordinates, Radar_Cartesian_Coordinates);
 
+            CoordinatesXYZ System_Cartesian_Coordinates = GeoUtils.change_geocentric2system_cartesian(Geocentric_Coordinates);
+            CoordinatesUVH System_Stereographic = GeoUtils.change_system_cartesian2stereographic(System_Cartesian_Coordinates);
             CoordinatesWGS84 WGS84_Coordinates = GeoUtils.change_geocentric2geodesic(Geocentric_Coordinates);
             this.Latitud = Convert.ToString(WGS84_Coordinates.Lat * 180 / Math.PI);
             this.Longitud = Convert.ToString(WGS84_Coordinates.Lon * 180 / Math.PI);
             this.Height = Convert.ToString(WGS84_Coordinates.Height);
+
+            this.U = Convert.ToString(GeoUtils.METERS2NM * System_Stereographic.U);
+            this.V = Convert.ToString(GeoUtils.METERS2NM * System_Stereographic.V);
+            this.H = Convert.ToString(GeoUtils.METERS2NM * System_Stereographic.Height);
 
         }
 
     }
 }
 
-        
-         
 
-        
+
 

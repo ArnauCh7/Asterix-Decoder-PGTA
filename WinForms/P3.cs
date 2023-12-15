@@ -33,30 +33,28 @@ namespace WinForms
 
         private void buttonProject3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog file = new OpenFileDialog(); //open dialog to choose file
-            if (file.ShowDialog() == DialogResult.OK) //if there is a file chosen by the user
+            
+            
+            string fileExt = Path.GetExtension("Excelp3\\2305_02_dep_lebl.xlsx"); //get the file extension
+            if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
             {
-                string fileExt = Path.GetExtension(file.FileName); //get the file extension
-                if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
+                try
                 {
-                    try
-                    {
-                        this.dt = ReadExcel(file.FileName); //read excel file
-                        dataGridView.Visible = true;
-                        dataGridView.DataSource = dt;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                    }
+                    this.dt = ReadExcel("Excelp3\\2305_02_dep_lebl.xlsx"); //read excel file
+                    dataGridView.Visible = true;
+                    dataGridView.DataSource = dt;
+                    this.aircraftList = ConvertDataTableToAircraftList(dt, "Indicativo", "TipoAeronave", "Estela", "PistaDesp", "ProcDesp", "HoraDespegue");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error
+                    MessageBox.Show(ex.Message.ToString());
                 }
             }
-
-            this.aircraftList = ConvertDataTableToAircraftList(dt, "Indicativo", "TipoAeronave", "Estela", "PistaDesp", "ProcDesp", "HoraDespegue");
+            else
+            {
+                MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error
+            }
+            
             
         }
 
