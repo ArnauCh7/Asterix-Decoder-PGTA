@@ -532,4 +532,59 @@ C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\Wi
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+<<<<<<< Updated upstream
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\ExcelDataReader.dll
+=======
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\obj\Debug\net6.0-windows\WinForms.P3.resources
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\230205_08_12_decodif_P3.csv
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\230502-est-080001_BCN.ast
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\2305_02_dep_lebl.xlsx
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_Clasificacion_aeronaves.xlsx
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_misma_SID_06R.xlsx
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_misma_SID_24L.xlsx
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\BitMiracle.LibTiff.NET.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\IronSoftware.Abstractions.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\IronSoftware.Logger.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\IronSoftware.Shared.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\IronSoftware.Drawing.Common.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\IronXL.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.Drawing.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\230205_08_12_decodif_P3.csv
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\230502-est-080001_BCN.ast
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\2305_02_dep_lebl.xlsx
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_Clasificacion_aeronaves.xlsx
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_misma_SID_06R.xlsx
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Excelp3\Tabla_misma_SID_24L.xlsx
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\BitMiracle.LibTiff.NET.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\IronSoftware.Abstractions.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\IronSoftware.Logger.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\IronSoftware.Shared.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\IronSoftware.Drawing.Common.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\IronXL.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.Drawing.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.P3.resources
+>>>>>>> Stashed changes

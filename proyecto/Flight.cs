@@ -200,6 +200,10 @@ namespace proyecto
         public string Longitud = "";
         public string Height = "";
 
+        // FUnciones para Estereographic
+        public string U = "";
+        public string V = "";
+        public string H = "";
         // Funciones para el FL
         public string Flight_Level_Validation = "";
         public string Flight_Level_Garbed = "";
@@ -2029,7 +2033,7 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
                     }
                     else
                     {
-                        Corrected_FL = Convert.ToString(h*100);
+                        Corrected_FL = "N/A";
                     }
                 }
 
@@ -2126,6 +2130,11 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
         {
             GeoUtils GeoUtils = new GeoUtils();
             double Height_m;
+            double height_radar_tang = 3438.954;
+            double Lat_deg_tang = 41.065656 * GeoUtils.DEGS2RADS;
+            double Lon_deg_tang = 1.413301 * GeoUtils.DEGS2RADS;
+            CoordinatesWGS84 system_center_tang = new CoordinatesWGS84(Lat_deg_tang, Lon_deg_tang, height_radar_tang);
+            GeoUtils.setCenterProjection(system_center_tang);
             if (Flight_Level_Value != "N/A")
             {
                 if (Corrected_FL != "")
@@ -2152,10 +2161,16 @@ public void Set_Message_Values(List<List<byte[]>> DifferentMessagesDivided, List
 
             CoordinatesXYZ Geocentric_Coordinates = GeoUtils.change_radar_cartesian2geocentric(RadarCoordinates, Radar_Cartesian_Coordinates);
 
+            CoordinatesXYZ System_Cartesian_Coordinates = GeoUtils.change_geocentric2system_cartesian(Geocentric_Coordinates);
+            CoordinatesUVH System_Stereographic = GeoUtils.change_system_cartesian2stereographic(System_Cartesian_Coordinates);
             CoordinatesWGS84 WGS84_Coordinates = GeoUtils.change_geocentric2geodesic(Geocentric_Coordinates);
             this.Latitud = Convert.ToString(WGS84_Coordinates.Lat * 180 / Math.PI);
             this.Longitud = Convert.ToString(WGS84_Coordinates.Lon * 180 / Math.PI);
             this.Height = Convert.ToString(WGS84_Coordinates.Height);
+
+            this.U = Convert.ToString(GeoUtils.METERS2NM*System_Stereographic.U);
+            this.V = Convert.ToString(GeoUtils.METERS2NM * System_Stereographic.V);
+            this.H = Convert.ToString(GeoUtils.METERS2NM * System_Stereographic.Height);
 
         }
 
