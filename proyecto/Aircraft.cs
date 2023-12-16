@@ -24,8 +24,16 @@ namespace Project2
         public string SID { get; set; }
 
         public DateTime horaDesp { get; set; }
+
+        public string reactorType { get; set; }
+
         public List<string> LatitudeList { get; set; } = new List<string>();
         public List<string> LongitudeList { get; set; } = new List<string>();
+
+        public List<string> UList { get; set; } = new List<string>();
+        public List<string> VList { get; set; } = new List<string>();
+
+
         public List<string> Time { get; set; } = new List<string>();
 
         public List<string> FL_ft { get; set; } = new List<string>();
@@ -33,6 +41,9 @@ namespace Project2
         public List<string> TAS { get; set; } = new List<string>();
 
         public List<string> IAS { get; set; } = new List<string>();
+
+        public List<string> statList { get; set; } = new List<string>();
+
         public List<CoordinatesWGS84> Coordinates { get; set; }=new List<CoordinatesWGS84>();
 
 
@@ -62,6 +73,10 @@ namespace Project2
                         existingAircraftWithTrackNumber.GS.Add(flight.Ground_Speed);
                         existingAircraftWithTrackNumber.LatitudeList.Add(flight.Latitud);
                         existingAircraftWithTrackNumber.LongitudeList.Add(flight.Longitud);
+                        existingAircraftWithTrackNumber.UList.Add(flight.U);
+                        existingAircraftWithTrackNumber.VList.Add(flight.V);
+                        string stat = flight.ACAS_Capability_STAT;
+                        existingAircraftWithTrackNumber.statList.Add(stat);
                         if (flight.Flight_Level_Value == "N/A")
                             existingAircraftWithTrackNumber.FL_ft.Add(existingAircraftWithTrackNumber.FL_ft.Last()); //Si no tenemos el punto extrapolamos al anterior
                         else if (Convert.ToDouble(flight.Flight_Level_Value) <= 60)
@@ -91,6 +106,9 @@ namespace Project2
                             GS = { flight.Ground_Speed },
                             LatitudeList = { flight.Latitud },
                             LongitudeList = { flight.Longitud },
+                            UList = {flight.U},
+                            VList = {flight.V},
+                            statList = { flight.ACAS_Capability_STAT},
                             TAS = { flight.True_Airspeed },
                             IAS = { flight.Indicated_AS },
                             Time = { flight.Time_of_Day },
@@ -112,6 +130,10 @@ namespace Project2
                         existingAircraft.GS.Add(flight.Ground_Speed);
                         existingAircraft.LatitudeList.Add(flight.Latitud);
                         existingAircraft.LongitudeList.Add(flight.Longitud);
+                        existingAircraft.UList.Add(flight.U);
+                        existingAircraft.VList.Add(flight.V);
+                        string stat = flight.ACAS_Capability_STAT;
+                        existingAircraft.statList.Add(stat);
                         if (flight.Flight_Level_Value == "N/A")
                             existingAircraft.FL_ft.Add(existingAircraft.FL_ft.Last()); //Si no tenemos el punto extrapolamos al anterior
                         else if (Convert.ToDouble(flight.Flight_Level_Value) <= 60)
@@ -141,6 +163,9 @@ namespace Project2
                             GS = { flight.Ground_Speed },
                             LatitudeList = { flight.Latitud },
                             LongitudeList = { flight.Longitud },
+                            UList = {flight.U},
+                            VList = {flight.V},
+                            statList = { flight.ACAS_Capability_STAT },
                             TAS = { flight.True_Airspeed },
                             IAS = { flight.Indicated_AS },
                             Time = { flight.Time_of_Day },
