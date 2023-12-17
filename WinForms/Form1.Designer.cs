@@ -44,9 +44,9 @@
             SimulationButton = new Button();
             pnHelp = new Panel();
             HelpButton = new Button();
-            sidebarTransition = new System.Windows.Forms.Timer(components);
             pnP3 = new Panel();
             P3Button = new Button();
+            sidebarTransition = new System.Windows.Forms.Timer(components);
             pnTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)sideButton).BeginInit();
             sidebar.SuspendLayout();
@@ -228,11 +228,6 @@
             HelpButton.UseVisualStyleBackColor = false;
             HelpButton.Click += HelpButton_Click;
             // 
-            // sidebarTransition
-            // 
-            sidebarTransition.Interval = 1;
-            sidebarTransition.Tick += sidebarTransition_Tick_1;
-            // 
             // pnP3
             // 
             pnP3.Controls.Add(P3Button);
@@ -252,10 +247,15 @@
             P3Button.Padding = new Padding(5, 0, 0, 0);
             P3Button.Size = new System.Drawing.Size(298, 87);
             P3Button.TabIndex = 2;
-            P3Button.Text = "         Statistics";
+            P3Button.Text = "         Project 3";
             P3Button.TextAlign = ContentAlignment.MiddleLeft;
             P3Button.UseVisualStyleBackColor = false;
             P3Button.Click += P3Button_Click;
+            // 
+            // sidebarTransition
+            // 
+            sidebarTransition.Interval = 1;
+            sidebarTransition.Tick += sidebarTransition_Tick_1;
             // 
             // Form1
             // 

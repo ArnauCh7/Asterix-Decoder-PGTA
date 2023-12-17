@@ -26,6 +26,10 @@ namespace WinForms
         public List<Aircraft> aircraftList;
         public List<Aircraft> List06R;
         public List<Aircraft> List24L;
+        public List<bool> listaCumplimientosEstela;
+        public List<int> listaColisionesEstela;
+        public List<bool> listaCumplimientosRadar;
+        public List<int> listaColisionesRadar;
         public P3()
         {
             InitializeComponent();
@@ -56,8 +60,43 @@ namespace WinForms
                     this.List06R = SepararListas(aircraftList).Item1;
                     this.List24L = SepararListas(aircraftList).Item2;
 
-                List<int> posiciones1 = SimmultaneousMessages(List24L[93], List24L[94]).Item1;
-                List<int> posiciones2 = SimmultaneousMessages(List24L[93], List24L[94]).Item2;
+                this.listaCumplimientosEstela = new List<bool>();
+                this.listaColisionesEstela = new List<int>();
+
+                this.listaCumplimientosRadar = new List<bool>();
+                this.listaColisionesRadar = new List<int>();
+
+                List<string[]> list = new List<string[]>();
+
+                for(int i = 0; i < List24L.Count-1; i++)
+                {
+                    if (List24L[i].Time.Count != 0)
+                    {
+                        List<int> posiciones1 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item1;
+                        List<int> posiciones2 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item2;
+                        Aircraft primero = List24L[i];
+                        Aircraft segundo = List24L[i + 1];
+
+                        List<double> listaDistanciasMensajes = CalculateTimedMessageDistances(posiciones1, posiciones2, primero, segundo);
+
+                        bool cumplimientoEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item1;
+                        int colisionesEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item2;
+
+                        bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
+                        int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
+
+                        this.listaCumplimientosEstela.Add(cumplimientoEstela);
+                        this.listaColisionesEstela.Add(colisionesEstela);
+
+                        this.listaCumplimientosRadar.Add(cumplimientoRadar);
+                        this.listaColisionesRadar.Add(colisionesRadar);
+
+                        string[] nombres = { List24L[i].AircraftID, List24L[i + 1].AircraftID };
+                        list.Add(nombres);
+                    }
+
+                }
+                
                 /*}
                 catch (Exception ex)
                 {
@@ -148,14 +187,26 @@ namespace WinForms
             return aircraftList;
         }
 
-
+        /// <summary>
+        /// Calcula la distancia entre 2 puntos dadas sus coordenadas estereograficas proyectadas en el plano correcto
+        /// </summary>
+        /// <param name="u1"></param>
+        /// <param name="v1"></param>
+        /// <param name="u2"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         static double CalculateDistance(double u1, double v1, double u2, double v2)
         {
             double distance = Math.Sqrt(Math.Pow(u2 - u1, 2) + Math.Pow(v2 - v1, 2));
             return distance;
         }
         
-        
+        /// <summary>
+        /// Filtra las listas de vuelo por Callsign de los despegues y por aviones que esten en el aire
+        /// </summary>
+        /// <param name="listaAsterixVolando"></param>
+        /// <param name="listafiltrada"></param>
+        /// <returns></returns>
         static List<Aircraft> FilterList(List<Aircraft> listaAsterixVolando, List<Aircraft> listafiltrada)
         {
 
@@ -211,6 +262,11 @@ namespace WinForms
         }
 
 
+        /// <summary>
+        /// Separa los aviones segun por que pista despeguen
+        /// </summary>
+        /// <param name="listToSeparate"></param>
+        /// <returns></returns>
         static (List<Aircraft>, List<Aircraft> ) SepararListas(List<Aircraft> listToSeparate)
         {
             List<Aircraft> lista06R = new List<Aircraft>();
@@ -232,7 +288,12 @@ namespace WinForms
 
         }
 
-
+        /// <summary>
+        /// Mira que mensajes se envian al mismo tiempo dados dos aviones y da las posiciones de los vectores del tiempo
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns></returns>
         static (List<int>, List<int> ) SimmultaneousMessages(Aircraft first, Aircraft second)
         {
             List<int> timedMessagesPosition_1 = new List<int>();
@@ -259,19 +320,150 @@ namespace WinForms
 
         }
         
-        static (bool, int) CheckTrailDistance(List<int> first, List<int> second)
+
+        /// <summary>
+        /// Dadas las posiciones de los vectores calcula las distancias entre las coodrenadas de los aviones cuando se encuantran en los puntos donde han enviado
+        /// los mensajes al mismo tiempo y las guarda en una lista
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <param name="primero"></param>
+        /// <param name="segundo"></param>
+        /// <returns></returns>
+        static List<double> CalculateTimedMessageDistances(List<int> positionlistfirst, List<int> positionlistsecond, Aircraft primero, Aircraft segundo)
         {
-            bool overall = false;
-            int collisions = 0;
+            List<double> listaDistancias = new List<double>();
+
+            foreach(int i in positionlistfirst)
+            {
+                int j = positionlistsecond[positionlistfirst.IndexOf(i)];
+
+                double distance = CalculateDistance(Convert.ToDouble(primero.UList[i]), Convert.ToDouble(primero.VList[i]), Convert.ToDouble(segundo.UList[j]), Convert.ToDouble(segundo.VList[j]));
+
+                listaDistancias.Add(distance);
+            }
+
+            return listaDistancias;
+        }
+
+        static (bool, int) CumplimientoRadar(List<double> listaDistancias)
+        {
+            bool cumplimiento = true;
+            int colisiones = 0;
+
+            foreach (double dist in listaDistancias)
+            {
+
+                if (dist < 3)
+                {
+                    colisiones++;
+                    cumplimiento = false;
+                    
+                }
+                
+            }
 
 
-
-
-
-            return (overall, collisions);
+            return (cumplimiento, colisiones);
         }
 
 
+
+
+        /// <summary>
+        /// Mira si entre los 2 vuelos se cumple la distancia en los momentos donde han enviado el mensaje al mismo tiempo segun los criterios de estela
+        /// y guarda el numero de incumplimientos
+        /// </summary>
+        /// <param name="listaDistancias"></param>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <returns></returns>
+
+        static (bool, int) CumplimientoEstela(List<double> listaDistancias, Aircraft first, Aircraft second)
+        {
+            bool cumplimiento = true;
+            int colisiones = 0;
+
+            foreach(double dist in listaDistancias)
+            {
+                                
+                if(first.Estela == "Super Pesada")
+                {
+                    if(second.Estela == "Pesada" && dist < 6)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if(second.Estela == "Media" && dist < 7)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if(second.Estela == "Ligera" && dist < 8)
+                    {
+                        colisiones++;
+                        cumplimiento= false;
+                    }
+                }
+                else if(first.Estela == "Pesada")
+                {
+                    if (second.Estela == "Pesada" && dist < 4)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if (second.Estela == "Media" && dist < 5)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if (second.Estela == "Ligera" && dist < 6)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                }
+                else if( first.Estela == "Media")
+                {
+                    if( second.Estela == "Ligera" && dist < 5)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    /*else if(second.Estela == "Media" && dist < 3)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if (second.Estela == "Pesada" && dist < 3)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }*/
+                }
+                /*else if (first.Estela == "Ligera")
+                {
+                    if(second.Estela == "Ligera" && dist < 3)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if( second.Estela == "Media" && dist < 3)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                    else if ( second.Estela == "Pesada" && dist < 3)
+                    {
+                        colisiones++;
+                        cumplimiento = false;
+                    }
+                }*/
+            }
+
+
+            return (cumplimiento, colisiones);
+        }
 
         
     }
