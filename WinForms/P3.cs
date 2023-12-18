@@ -30,6 +30,8 @@ namespace WinForms
         public List<int> listaColisionesEstela;
         public List<bool> listaCumplimientosRadar;
         public List<int> listaColisionesRadar;
+        public List<bool> listaCumplimientosLoA;
+        public List<int> listaColisionesLoA;
         public P3()
         {
             InitializeComponent();
@@ -66,9 +68,15 @@ namespace WinForms
                 this.listaCumplimientosRadar = new List<bool>();
                 this.listaColisionesRadar = new List<int>();
 
-                List<string[]> list = new List<string[]>();
+                this.listaCumplimientosLoA = new List<bool>();
+                this.listaColisionesLoA = new List<int>();
 
-                for(int i = 0; i < List24L.Count-1; i++)
+                List<string[]> list = new List<string[]>();
+                int totalColisonesRadar = 0;
+                int totalColisonesEstela = 0;
+                int totalColisonesLoA = 0;
+
+                for (int i = 0; i < List24L.Count-1; i++)
                 {
                     if (List24L[i].Time.Count != 0)
                     {
@@ -85,14 +93,35 @@ namespace WinForms
                         bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
                         int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
 
+                        bool cumplimientoLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo).Item1;
+                        int colisionesLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo).Item2;
+
                         this.listaCumplimientosEstela.Add(cumplimientoEstela);
                         this.listaColisionesEstela.Add(colisionesEstela);
 
                         this.listaCumplimientosRadar.Add(cumplimientoRadar);
                         this.listaColisionesRadar.Add(colisionesRadar);
 
+                        this.listaCumplimientosLoA.Add(cumplimientoLoA);
+                        this.listaColisionesLoA.Add(colisionesLoA);
+
                         string[] nombres = { List24L[i].AircraftID, List24L[i + 1].AircraftID };
                         list.Add(nombres);
+
+                        if (!cumplimientoEstela)
+                        {
+                            totalColisonesEstela++;
+                        }
+                        if(!cumplimientoRadar)
+                        {
+                            totalColisonesRadar++;
+                        }
+                        if (!cumplimientoLoA)
+                        {
+                            totalColisonesLoA++;
+                        }
+
+
                     }
 
                 }
@@ -218,17 +247,21 @@ namespace WinForms
                 {
                     if(air.AircraftID == plane.AircraftID.Trim())
                     {
-                        air.LatitudeList = plane.LatitudeList;
-                        air.LongitudeList = plane.LongitudeList;
-                        air.Time = plane.Time;
-                        air.TAS = plane.TAS;
-                        air.IAS = plane.IAS;
-                        air.GS = plane.GS;
-                        air.FL_ft = plane.FL_ft;
-                        air.UList = plane.UList;
-                        air.VList = plane.VList;
-                        air.statList = plane.statList;
+                        if(air.PistaDesp != "024R")
+                        {
+                            air.LatitudeList = plane.LatitudeList;
+                            air.LongitudeList = plane.LongitudeList;
+                            air.Time = plane.Time;
+                            air.TAS = plane.TAS;
+                            air.IAS = plane.IAS;
+                            air.GS = plane.GS;
+                            air.FL_ft = plane.FL_ft;
+                            air.UList = plane.UList;
+                            air.VList = plane.VList;
+                            air.statList = plane.statList;
+                        }
                     }
+
                 }
 
                 int count = 0;
@@ -465,7 +498,408 @@ namespace WinForms
             return (cumplimiento, colisiones);
         }
 
-        
+
+
+        static (bool, int) CumplimientoLoA(List<double> listaDistancias, Aircraft first, Aircraft second)
+        {
+            bool cumplimiento = true;
+            int colisiones = 0;
+
+            foreach (double dist in listaDistancias)
+            {
+
+                if(first.reactorType == "HP")//HP/////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if(second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if(dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+                else if (first.reactorType == "R")//R////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if (second.SID == first.SID && dist < 7)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+                else if (first.reactorType == "LP")//LP /////////////////////////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if (second.SID == first.SID && dist < 8)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 6)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (second.SID == first.SID && dist < 6)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 4)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+                else if (first.reactorType == "NR+")//NR+///////////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if (second.SID == first.SID && dist < 11)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 8)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (second.SID == first.SID && dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 6)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (second.SID == first.SID && dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 6)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+                else if (first.reactorType == "NR-")//NR-////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if (second.SID == first.SID && dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 6)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+                else if (first.reactorType == "NR")//NR////////////////////////////////////////////////////////////////////////////////
+                {
+                    if (second.reactorType == "HP")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "R")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "LP")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR+")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR-")
+                    {
+                        if (dist < 9)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                    else if (second.reactorType == "NR")
+                    {
+                        if (second.SID == first.SID && dist < 5)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                        else if (first.SID != second.SID && dist < 3)
+                        {
+                            colisiones++;
+                            cumplimiento = false;
+                        }
+                    }
+                }
+            }
+
+
+            return (cumplimiento, colisiones);
+        }
+
     }
 
 }

@@ -15,6 +15,7 @@ namespace Project2
     {
         public string AircraftID { get; set; }
         
+
         public string AircraftModel {  get; set; }
 
         public string Estela {  get; set; }

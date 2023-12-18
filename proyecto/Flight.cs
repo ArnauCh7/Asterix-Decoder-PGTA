@@ -2162,7 +2162,8 @@ namespace proyecto
 
             CoordinatesXYZ Geocentric_Coordinates = GeoUtils.change_radar_cartesian2geocentric(RadarCoordinates, Radar_Cartesian_Coordinates);
 
-            CoordinatesXYZ System_Cartesian_Coordinates = GeoUtils.change_geocentric2system_cartesian(Geocentric_Coordinates);
+            //CoordinatesXYZ System_Cartesian_Coordinates = GeoUtils.change_geocentric2system_cartesian(Geocentric_Coordinates);
+            CoordinatesXYZ System_Cartesian_Coordinates = GeoUtils.change_radar_cartesian2system_cartesian(RadarCoordinates, Radar_Cartesian_Coordinates);
             CoordinatesUVH System_Stereographic = GeoUtils.change_system_cartesian2stereographic(System_Cartesian_Coordinates);
             CoordinatesWGS84 WGS84_Coordinates = GeoUtils.change_geocentric2geodesic(Geocentric_Coordinates);
             this.Latitud = Convert.ToString(WGS84_Coordinates.Lat * 180 / Math.PI);
