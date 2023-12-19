@@ -15,7 +15,7 @@ namespace Project2
     {
         public string AircraftID { get; set; }
         
-
+        public string  TrackNumber { get; set; }
         public string AircraftModel {  get; set; }
 
         public string Estela {  get; set; }
@@ -66,7 +66,7 @@ namespace Project2
                 if (flight.Aircraft_ID == "N/A")
                 {
                     // Manejar el caso especial para Aircraft_ID "N/A"
-                    var existingAircraftWithTrackNumber = aircraftList.Find(a => a.AircraftID == flight.Track_Number);
+                    var existingAircraftWithTrackNumber = aircraftList.Find(a => a.AircraftID == flight.Track_Number && a.TrackNumber==flight.Track_Number);
 
                     if (existingAircraftWithTrackNumber != null)
                     {
@@ -104,6 +104,7 @@ namespace Project2
                         var newAircraft = new Aircraft
                         {
                             AircraftID = flight.Track_Number,
+                            TrackNumber= flight.Track_Number,
                             GS = { flight.Ground_Speed },
                             LatitudeList = { flight.Latitud },
                             LongitudeList = { flight.Longitud },
@@ -123,8 +124,8 @@ namespace Project2
                 else
                 {
                     // Manejar el caso normal para Aircraft_ID diferente de "N/A"
-                    var existingAircraft = aircraftList.Find(a => a.AircraftID == flight.Aircraft_ID);
-
+                    var existingAircraft = aircraftList.Find(a => a.AircraftID == flight.Aircraft_ID && a.TrackNumber==flight.Track_Number);
+                    
                     if (existingAircraft != null)
                     {
                         // Agregar valores a la clase existente
@@ -161,6 +162,7 @@ namespace Project2
                         var newAircraft = new Aircraft
                         {
                             AircraftID = flight.Aircraft_ID,
+                            TrackNumber = flight.Track_Number,
                             GS = { flight.Ground_Speed },
                             LatitudeList = { flight.Latitud },
                             LongitudeList = { flight.Longitud },

@@ -15,6 +15,7 @@ using System.Data.Common;
 using GMap.NET.MapProviders;
 using System.Xml.Serialization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics;
 
 namespace WinForms
 {
@@ -287,7 +288,37 @@ namespace WinForms
                     air.IAS.RemoveRange(0, count);
                     air.statList.RemoveRange(0, count);
                 }
+
+                foreach (string latitude in air.LatitudeList)
+                {
+                    int index= air.LatitudeList.IndexOf(latitude);
+                    string longitude = air.LongitudeList[index];
+
+                    double latitude1 = Convert.ToDouble(latitude);
+                    double longitude1 = Convert.ToDouble(longitude);
+                    // Verificar las condiciones de filtrado
+                    if (latitude1 >= 40.9 && latitude1 <= 41.7 && longitude1 >= 1.5 && longitude1 <= 2.6)
+                    {
+
+                    }
+                    else
+                    {
+                        air.LongitudeList.RemoveAt(index);
+                        air.LatitudeList.RemoveAt(index);
+                        air.UList.RemoveAt(index);
+                        air.VList.RemoveAt(index);
+                        air.Time.RemoveAt(index);
+                        air.FL_ft.RemoveAt(index);
+                        air.GS.RemoveAt(index);
+                        air.TAS.RemoveAt(index);
+                        air.IAS.RemoveRange(0, count);
+                        air.statList.RemoveAt(index);
+                    }
+
+                }
                 
+
+
 
             }
 

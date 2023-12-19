@@ -84,6 +84,7 @@ namespace WinForms
                 progressBar1.Value = 60;
                 loadingtextbox.Visible = true;
                 Vuelos= ListaVuelos.ApplyGeographicFilter(Vuelos);
+                Vuelos = ListaVuelos.ApplyRequiredFilters(Vuelos);
                 this.listaVuelos = Vuelos;
                 this.Datos = FlightList.GetDataTable(listaVuelos);
                 progressBar1.Value = 80;
