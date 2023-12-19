@@ -417,7 +417,38 @@ namespace Project2
             return flightsfiltered;
         }
 
+        public List<Flight> ApplyRequiredFilters(List<Flight> flights)
+        {
+            List<Flight> flightsfiltered = new List<Flight>();
+            foreach (Flight f in flights)
+            {
+                if ((f.Target_Report_Descriptor_TYP== "ModeS Roll-Call +PSR") || (f.Target_Report_Descriptor_TYP == "Single ModeS Roll-Call")|| (f.Target_Report_Descriptor_TYP == "Single ModeS All-Call"))
+                {
+                    if (f.Mode_3A_Reply != "7777")
+                    {
+                        flightsfiltered.Add(f);
+                    }
+                    
+                } 
+                
+            }
+            return flightsfiltered;
+        }
 
+        public List<Flight> ApplyFlyingFilter(List<Flight> flights)
+        {
+            List<Flight> flightsfiltered = new List<Flight>();
+            foreach (Flight f in flights)
+            {
+                if ((f.ACAS_Capability_STAT == "No alert, no SPI, aircraft airborne") || (f.Target_Report_Descriptor_TYP == "Alert, no SPI, aircraft airborne"))
+                {
+                    
+                    flightsfiltered.Add(f);
+                    
+                }
 
+            }
+            return flightsfiltered;
+        }
     }
 }
