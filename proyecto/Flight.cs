@@ -2131,7 +2131,7 @@ namespace proyecto
         {
             GeoUtils GeoUtils = new GeoUtils();
             double Height_m;
-            double height_radar_tang = 3438.954;
+            double height_radar_tang = 0;
             double Lat_deg_tang = 41.065656 * GeoUtils.DEGS2RADS;
             double Lon_deg_tang = 1.413301 * GeoUtils.DEGS2RADS;
             CoordinatesWGS84 system_center_tang = new CoordinatesWGS84(Lat_deg_tang, Lon_deg_tang, height_radar_tang);

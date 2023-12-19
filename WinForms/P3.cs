@@ -338,7 +338,7 @@ namespace WinForms
                 foreach (string time2 in second.Time)
                 {
                     string time2secs = time2.Substring(0, time2.Length - 4);
-                    if (time2secs == time1secs)
+                    if (time2secs == time1secs) //Cambiar per interval de temps +- 2 segons
                     {
                         int firstIndex = first.Time.IndexOf(time);
                         int secondIndex = second.Time.IndexOf(time2);
