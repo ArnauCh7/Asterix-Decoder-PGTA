@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             openFileButton = new Button();
-            dataGridView = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // openFileButton
@@ -47,33 +45,21 @@
             openFileButton.UseVisualStyleBackColor = false;
             openFileButton.Click += buttonProject3_Click;
             // 
-            // dataGridView
-            // 
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new System.Drawing.Point(27, 103);
-            dataGridView.Name = "dataGridView";
-            dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new System.Drawing.Size(761, 302);
-            dataGridView.TabIndex = 1;
-            // 
             // P3
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(dataGridView);
             Controls.Add(openFileButton);
             FormBorderStyle = FormBorderStyle.None;
             Name = "P3";
             Text = "P3";
             Load += P3_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button openFileButton;
-        private DataGridView dataGridView;
     }
 }

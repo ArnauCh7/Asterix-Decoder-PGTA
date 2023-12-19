@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\WinForms\\WinForms.csproj": {}
+    "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\WinForms\\WinForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj": {
+    "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj",
+        "projectUniqueName": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj",
         "projectName": "Project2",
-        "projectPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj",
-        "packagesPath": "C:\\Users\\LucasSS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\obj\\",
+        "projectPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj",
+        "packagesPath": "C:\\Users\\arnau\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LucasSS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arnau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,20 +74,20 @@
         }
       }
     },
-    "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\WinForms\\WinForms.csproj": {
+    "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\WinForms\\WinForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\WinForms\\WinForms.csproj",
+        "projectUniqueName": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\WinForms\\WinForms.csproj",
         "projectName": "WinForms",
-        "projectPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\WinForms\\WinForms.csproj",
-        "packagesPath": "C:\\Users\\LucasSS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\WinForms\\obj\\",
+        "projectPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\WinForms\\WinForms.csproj",
+        "packagesPath": "C:\\Users\\arnau\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\WinForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LucasSS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\arnau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -103,8 +103,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj": {
-                "projectPath": "C:\\Users\\LucasSS\\Desktop\\UNIVERSIDAD\\PGTA\\P2 repositorio\\Asterix-Decoder-PGTA\\proyecto\\Project2.csproj"
+              "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj": {
+                "projectPath": "D:\\Proyecto2_v1.4\\Proyecto2_v1.4\\proyecto\\Project2.csproj"
               }
             }
           }
@@ -126,6 +126,10 @@
             "DG.AdvancedDataGridView": {
               "target": "Package",
               "version": "[1.2.28405.11, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             },
             "GMap.NET.WinForms": {
               "target": "Package",
