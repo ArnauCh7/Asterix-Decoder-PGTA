@@ -584,3 +584,15 @@ C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\Wi
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.dll
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\SixLabors.ImageSharp.Drawing.dll
 C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\obj\Debug\net6.0-windows\WinForms.P3.resources
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\LucasSS\Desktop\UNIVERSIDAD\PGTA\P2 repositorio\Asterix-Decoder-PGTA\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\EPPlus.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\Proyecto2_v1.4\Proyecto2_v1.4\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

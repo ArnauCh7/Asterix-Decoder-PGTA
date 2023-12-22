@@ -33,15 +33,16 @@
             // 
             // openFileButton
             // 
+            openFileButton.Anchor = AnchorStyles.None;
             openFileButton.BackColor = System.Drawing.Color.CornflowerBlue;
             openFileButton.FlatAppearance.BorderSize = 0;
             openFileButton.FlatStyle = FlatStyle.Flat;
-            openFileButton.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            openFileButton.Location = new System.Drawing.Point(349, 53);
+            openFileButton.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            openFileButton.Location = new System.Drawing.Point(293, 202);
             openFileButton.Name = "openFileButton";
-            openFileButton.Size = new System.Drawing.Size(87, 29);
+            openFileButton.Size = new System.Drawing.Size(195, 64);
             openFileButton.TabIndex = 0;
-            openFileButton.Text = "Browse";
+            openFileButton.Text = "Execute P3";
             openFileButton.UseVisualStyleBackColor = false;
             openFileButton.Click += buttonProject3_Click;
             // 

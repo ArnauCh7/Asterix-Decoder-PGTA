@@ -17,12 +17,17 @@ using System.Xml.Serialization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
 using OfficeOpenXml;
+using System.IO;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Globalization;
+
 
 
 namespace WinForms
 {
     public partial class P3 : Form
     {
+        
         public static P3 p3Instance;
         public DataTable dt_flights;
         public DataTable dt_reactors;
@@ -39,6 +44,8 @@ namespace WinForms
         public List<int> listaColisionesRadar24L;
         public List<bool> listaCumplimientosLoA24L;
         public List<int> listaColisionesLoA24L;
+        public List<string[]> listnames24L;
+        public List<List<Double>>Distancias24L;
 
         ////////////////06R///////////////
         public List<bool> listaCumplimientosEstela06R;
@@ -47,6 +54,8 @@ namespace WinForms
         public List<int> listaColisionesRadar06R;
         public List<bool> listaCumplimientosLoA06R;
         public List<int> listaColisionesLoA06R;
+        public List<string[]> listnames06R;
+        public List<List<Double>> Distancias06R;
         public P3()
         {
             InitializeComponent();
@@ -61,184 +70,203 @@ namespace WinForms
         private void buttonProject3_Click(object sender, EventArgs e)
         {
 
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "xlsx files (*.xlsx)|*.xlsx";
+            saveFileDialog.DefaultExt = "xlsx";
+            saveFileDialog.AddExtension = true;
 
-            string fileExt = Path.GetExtension("Excelp3\\2305_02_dep_lebl.xlsx"); //get the file extension
-            string fileExt2 = Path.GetExtension("Excelp3\\Tabla_Clasificacion_aeronaves.xlsx"); //extension de la tabla de performance
-            string fileExt3 = Path.GetExtension("Excelp3\\Tabla_misma_SID_06R.xlsx");
-            string fileExt4 = Path.GetExtension("Excelp3\\Tabla_misma_SID_24L.xlsx");
-
-            if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0 || fileExt2.CompareTo(".xls") == 0 || fileExt2.CompareTo(".xlsx") == 0 || fileExt3.CompareTo(".xls") == 0 || fileExt3.CompareTo(".xlsx") == 0 || fileExt4.CompareTo(".xls") == 0 || fileExt4.CompareTo(".xlsx") == 0)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                /*try
-                {*/
-                this.dt_flights = ReadExcel("Excelp3\\2305_02_dep_lebl.xlsx"); //read excel file
-                this.dt_reactors = ReadExcel("Excelp3\\Tabla_Clasificacion_aeronaves.xlsx"); //leer la tabla de clasificacion segun reactor performance
-                this.dt_misma06R = ReadExcel("Excelp3\\Tabla_misma_SID_06R.xlsx");//Leer tabla de misma SID de la 06R
-                this.dt_misma24L = ReadExcel("Excelp3\\Tabla_misma_SID_24L.xlsx");//Lerr tabla de la misma SID de la 24L
+                var xlsxPath = saveFileDialog.FileName;
+                string fileExt = Path.GetExtension("Excelp3\\2305_02_dep_lebl.xlsx"); //get the file extension
+                string fileExt2 = Path.GetExtension("Excelp3\\Tabla_Clasificacion_aeronaves.xlsx"); //extension de la tabla de performance
+                string fileExt3 = Path.GetExtension("Excelp3\\Tabla_misma_SID_06R.xlsx");
+                string fileExt4 = Path.GetExtension("Excelp3\\Tabla_misma_SID_24L.xlsx");
 
-
-                this.aircraftList = ConvertDataTableToAircraftList(dt_flights, dt_reactors, "Indicativo", "TipoAeronave", "Estela", "PistaDesp", "ProcDesp", "HoraDespegue");
-                this.aircraftList = FilterList(formImport.importInstance.Aviones, this.aircraftList);
-                this.List06R = SepararListas(aircraftList).Item1;
-                this.List24L = SepararListas(aircraftList).Item2;
-
-
-                /////////////////24L/////////////////////
-                this.listaCumplimientosEstela24L = new List<bool>();
-                this.listaColisionesEstela24L = new List<int>();
-
-                this.listaCumplimientosRadar24L = new List<bool>();
-                this.listaColisionesRadar24L = new List<int>();
-
-                this.listaCumplimientosLoA24L = new List<bool>();
-                this.listaColisionesLoA24L = new List<int>();
-
-                /////////////////06R/////////////////////
-                this.listaCumplimientosEstela06R = new List<bool>();
-                this.listaColisionesEstela06R = new List<int>();
-
-                this.listaCumplimientosRadar06R = new List<bool>();
-                this.listaColisionesRadar06R = new List<int>();
-
-                this.listaCumplimientosLoA06R = new List<bool>();
-                this.listaColisionesLoA06R = new List<int>();
-
-                ///////////////////24L//////////////////
-                List<string[]> listnames24L = new List<string[]>();
-                int totalColisonesRadar24L = 0;
-                int totalColisonesEstela24L = 0;
-                int totalColisonesLoA24L = 0;
-
-                //////////////////06R///////////////////
-                List<string[]> listnames06R = new List<string[]>();
-                int totalColisonesRadar06R = 0;
-                int totalColisonesEstela06R = 0;
-                int totalColisonesLoA06R = 0;
-
-
-                /////////////////////////////////////////////////////// 24L /////////////////////////////////////////////////////////////////////
-                
-                if(List24L.Count != 0)
+                if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0 || fileExt2.CompareTo(".xls") == 0 || fileExt2.CompareTo(".xlsx") == 0 || fileExt3.CompareTo(".xls") == 0 || fileExt3.CompareTo(".xlsx") == 0 || fileExt4.CompareTo(".xls") == 0 || fileExt4.CompareTo(".xlsx") == 0)
                 {
-                    for (int i = 0; i < List24L.Count - 1; i++)
+                    /*try
+                    {*/
+                    this.dt_flights = ReadExcel("Excelp3\\2305_02_dep_lebl.xlsx"); //read excel file
+                    this.dt_reactors = ReadExcel("Excelp3\\Tabla_Clasificacion_aeronaves.xlsx"); //leer la tabla de clasificacion segun reactor performance
+                    this.dt_misma06R = ReadExcel("Excelp3\\Tabla_misma_SID_06R.xlsx");//Leer tabla de misma SID de la 06R
+                    this.dt_misma24L = ReadExcel("Excelp3\\Tabla_misma_SID_24L.xlsx");//Lerr tabla de la misma SID de la 24L
+
+
+                    this.aircraftList = ConvertDataTableToAircraftList(dt_flights, dt_reactors, "Indicativo", "TipoAeronave", "Estela", "PistaDesp", "ProcDesp", "HoraDespegue");
+                    this.aircraftList = FilterList(formImport.importInstance.Aviones, this.aircraftList);
+                    this.List06R = SepararListas(aircraftList).Item1;
+                    this.List24L = SepararListas(aircraftList).Item2;
+
+
+                    /////////////////24L/////////////////////
+                    this.listaCumplimientosEstela24L = new List<bool>();
+                    this.listaColisionesEstela24L = new List<int>();
+
+                    this.listaCumplimientosRadar24L = new List<bool>();
+                    this.listaColisionesRadar24L = new List<int>();
+
+                    this.listaCumplimientosLoA24L = new List<bool>();
+                    this.listaColisionesLoA24L = new List<int>();
+                    this.Distancias24L = new List<List<double>>();
+
+                    /////////////////06R/////////////////////
+                    this.listaCumplimientosEstela06R = new List<bool>();
+                    this.listaColisionesEstela06R = new List<int>();
+
+                    this.listaCumplimientosRadar06R = new List<bool>();
+                    this.listaColisionesRadar06R = new List<int>();
+
+                    this.listaCumplimientosLoA06R = new List<bool>();
+                    this.listaColisionesLoA06R = new List<int>();
+                    this.Distancias06R = new List<List<double>>();
+
+                    ///////////////////24L//////////////////
+                    listnames24L = new List<string[]>();
+                    int totalColisonesRadar24L = 0;
+                    int totalColisonesEstela24L = 0;
+                    int totalColisonesLoA24L = 0;
+
+                    //////////////////06R///////////////////
+                    listnames06R = new List<string[]>();
+                    int totalColisonesRadar06R = 0;
+                    int totalColisonesEstela06R = 0;
+                    int totalColisonesLoA06R = 0;
+
+
+                    /////////////////////////////////////////////////////// 24L /////////////////////////////////////////////////////////////////////
+
+                    if (List24L.Count != 0)
                     {
-                        if (List24L[i].Time.Count != 0)
+                        for (int i = 0; i < List24L.Count - 1; i++)
                         {
-                            List<int> posiciones1 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item1;
-                            List<int> posiciones2 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item2;
-                            Aircraft primero = List24L[i];
-                            Aircraft segundo = List24L[i + 1];
-
-                            List<double> listaDistanciasMensajes = CalculateTimedMessageDistances(posiciones1, posiciones2, primero, segundo);
-
-                            bool cumplimientoEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item1;
-                            int colisionesEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item2;
-
-                            bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
-                            int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
-
-                            bool cumplimientoLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item1;
-                            int colisionesLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item2;
-
-                            this.listaCumplimientosEstela24L.Add(cumplimientoEstela);
-                            this.listaColisionesEstela24L.Add(colisionesEstela);
-
-                            this.listaCumplimientosRadar24L.Add(cumplimientoRadar);
-                            this.listaColisionesRadar24L.Add(colisionesRadar);
-
-                            this.listaCumplimientosLoA24L.Add(cumplimientoLoA);
-                            this.listaColisionesLoA24L.Add(colisionesLoA);
-
-                            string[] nombres = { List24L[i].AircraftID, List24L[i + 1].AircraftID };
-                            listnames24L.Add(nombres);
-
-                            if (!cumplimientoEstela)
+                            if (List24L[i].Time.Count != 0)
                             {
-                                totalColisonesEstela24L++;
-                            }
-                            if (!cumplimientoRadar)
-                            {
-                                totalColisonesRadar24L++;
-                            }
-                            if (!cumplimientoLoA)
-                            {
-                                totalColisonesLoA24L++;
-                            }
+                                List<int> posiciones1 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item1;
+                                List<int> posiciones2 = SimmultaneousMessages(List24L[i], List24L[i + 1]).Item2;
+                                Aircraft primero = List24L[i];
+                                Aircraft segundo = List24L[i + 1];
 
+                                List<double> listaDistanciasMensajes = CalculateTimedMessageDistances(posiciones1, posiciones2, primero, segundo);
+
+                                bool cumplimientoEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item1;
+                                int colisionesEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item2;
+
+                                bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
+                                int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
+
+                                bool cumplimientoLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item1;
+                                int colisionesLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item2;
+
+                                this.listaCumplimientosEstela24L.Add(cumplimientoEstela);
+                                this.listaColisionesEstela24L.Add(colisionesEstela);
+
+                                this.listaCumplimientosRadar24L.Add(cumplimientoRadar);
+                                this.listaColisionesRadar24L.Add(colisionesRadar);
+
+                                this.listaCumplimientosLoA24L.Add(cumplimientoLoA);
+                                this.listaColisionesLoA24L.Add(colisionesLoA);
+
+                                string[] nombres = { List24L[i].AircraftID, List24L[i + 1].AircraftID };
+                                listnames24L.Add(nombres);
+
+                                if (!cumplimientoEstela)
+                                {
+                                    totalColisonesEstela24L++;
+                                }
+                                if (!cumplimientoRadar)
+                                {
+                                    totalColisonesRadar24L++;
+                                }
+                                if (!cumplimientoLoA)
+                                {
+                                    totalColisonesLoA24L++;
+                                }
+
+                                Distancias24L.Add(listaDistanciasMensajes);
+                            }
 
                         }
 
                     }
 
-                }
-
-                /////////////////////////////////////////////////////// 06R /////////////////////////////////////////////////////////////////////
-                if(List06R.Count != 0)
-                {
-                    for (int i = 0; i < List06R.Count - 1; i++)
+                    /////////////////////////////////////////////////////// 06R /////////////////////////////////////////////////////////////////////
+                    if (List06R.Count != 0)
                     {
-                        if (List06R[i].Time.Count != 0)
+                        for (int i = 0; i < List06R.Count - 1; i++)
                         {
-                            List<int> posiciones1 = SimmultaneousMessages(List06R[i], List06R[i + 1]).Item1;
-                            List<int> posiciones2 = SimmultaneousMessages(List06R[i], List06R[i + 1]).Item2;
-                            Aircraft primero = List06R[i];
-                            Aircraft segundo = List06R[i + 1];
-
-                            List<double> listaDistanciasMensajes = CalculateTimedMessageDistances(posiciones1, posiciones2, primero, segundo);
-
-                            bool cumplimientoEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item1;
-                            int colisionesEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item2;
-
-                            bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
-                            int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
-
-                            bool cumplimientoLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item1;
-                            int colisionesLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item2;
-
-                            this.listaCumplimientosEstela06R.Add(cumplimientoEstela);
-                            this.listaColisionesEstela06R.Add(colisionesEstela);
-
-                            this.listaCumplimientosRadar06R.Add(cumplimientoRadar);
-                            this.listaColisionesRadar06R.Add(colisionesRadar);
-
-                            this.listaCumplimientosLoA06R.Add(cumplimientoLoA);
-                            this.listaColisionesLoA06R.Add(colisionesLoA);
-
-                            string[] nombres = { List06R[i].AircraftID, List06R[i + 1].AircraftID };
-                            listnames06R.Add(nombres);
-
-                            if (!cumplimientoEstela)
+                            if (List06R[i].Time.Count != 0)
                             {
-                                totalColisonesEstela06R++;
-                            }
-                            if (!cumplimientoRadar)
-                            {
-                                totalColisonesRadar06R++;
-                            }
-                            if (!cumplimientoLoA)
-                            {
-                                totalColisonesLoA06R++;
-                            }
+                                List<int> posiciones1 = SimmultaneousMessages(List06R[i], List06R[i + 1]).Item1;
+                                List<int> posiciones2 = SimmultaneousMessages(List06R[i], List06R[i + 1]).Item2;
+                                Aircraft primero = List06R[i];
+                                Aircraft segundo = List06R[i + 1];
 
+                                List<double> listaDistanciasMensajes = CalculateTimedMessageDistances(posiciones1, posiciones2, primero, segundo);
+
+                                bool cumplimientoEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item1;
+                                int colisionesEstela = CumplimientoEstela(listaDistanciasMensajes, primero, segundo).Item2;
+
+                                bool cumplimientoRadar = CumplimientoRadar(listaDistanciasMensajes).Item1;
+                                int colisionesRadar = CumplimientoRadar(listaDistanciasMensajes).Item2;
+
+                                bool cumplimientoLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item1;
+                                int colisionesLoA = CumplimientoLoA(listaDistanciasMensajes, primero, segundo, this.dt_misma24L, this.dt_misma06R).Item2;
+
+                                this.listaCumplimientosEstela06R.Add(cumplimientoEstela);
+                                this.listaColisionesEstela06R.Add(colisionesEstela);
+
+                                this.listaCumplimientosRadar06R.Add(cumplimientoRadar);
+                                this.listaColisionesRadar06R.Add(colisionesRadar);
+
+                                this.listaCumplimientosLoA06R.Add(cumplimientoLoA);
+                                this.listaColisionesLoA06R.Add(colisionesLoA);
+
+                                string[] nombres = { List06R[i].AircraftID, List06R[i + 1].AircraftID };
+                                listnames06R.Add(nombres);
+
+                                if (!cumplimientoEstela)
+                                {
+                                    totalColisonesEstela06R++;
+                                }
+                                if (!cumplimientoRadar)
+                                {
+                                    totalColisonesRadar06R++;
+                                }
+                                if (!cumplimientoLoA)
+                                {
+                                    totalColisonesLoA06R++;
+                                }
+
+                                Distancias06R.Add(listaDistanciasMensajes);
+                            }
 
                         }
 
                     }
 
+                    /*}
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }*/
+                }
+                else
+                {
+                    MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error
                 }
 
-                /*}
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }*/
+
+                string rutaarchivo = xlsxPath;
+
+                CrearArchivoExcel(rutaarchivo, listnames24L, List24L, Distancias24L, listaCumplimientosLoA24L, listaColisionesLoA24L, listaCumplimientosRadar24L, listaColisionesRadar24L, listaCumplimientosEstela24L, listaColisionesEstela24L, listnames06R, List06R, Distancias06R, listaCumplimientosLoA06R, listaColisionesLoA06R, listaCumplimientosRadar06R, listaColisionesRadar06R, listaCumplimientosEstela06R, listaColisionesEstela06R);
+
             }
             else
             {
-                MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); //custom messageBox to show error
+                MessageBox.Show($"No name or directory selected. Please insert a valid name or location", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
+           
         }
 
         /// <summary>
@@ -1783,8 +1811,10 @@ namespace WinForms
                             .Any(row => row.Field<string>(nombreColumna) == cadenaBuscada);
         }
 
-        static void CrearArchivoExcel(string rutaArchivo, List<Aircraft> Aviones24L, List<bool> listaCumplimientosLoA24L, List<int> listaColisionesLoA24L, List<bool> listaCumplimientosRadar24L, List<int> listaColisionesRadar24L, List<bool> listaCumplimientosEstela24L, List<int> listaColisionesEstela24L, List<Aircraft> Aviones06R, List<bool> listaCumplimientosLoA06R, List<int> listaColisionesLoA06R, List<bool> listaCumplimientosRadar06R, List<int> listaColisionesRadar06R, List<bool> listaCumplimientosEstela06R, List<int> listaColisionesEstela06R)
+        static void CrearArchivoExcel(string rutaArchivo, List<String[]>AircraftsID24L, List<Aircraft> Aviones24L, List<List<Double>>Distancias24L,List<bool> listaCumplimientosLoA24L, List<int> listaColisionesLoA24L, List<bool> listaCumplimientosRadar24L, List<int> listaColisionesRadar24L, List<bool> listaCumplimientosEstela24L, List<int> listaColisionesEstela24L,List<String[]> AircraftsID06R,List<Aircraft> Aviones06R, List<List<Double>> Distancias06R, List<bool> listaCumplimientosLoA06R, List<int> listaColisionesLoA06R, List<bool> listaCumplimientosRadar06R, List<int> listaColisionesRadar06R, List<bool> listaCumplimientosEstela06R, List<int> listaColisionesEstela06R)
         {
+            OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
             // Crear un nuevo archivo Excel
             using (var paquete = new ExcelPackage())
             {
@@ -1814,21 +1844,25 @@ namespace WinForms
 
                 //Insertar datos 
                 int row = 0;
-                for (int i = 0; i < Aviones24L.Count(); i = i + 2)
+                for (int i = 0; i < AircraftsID24L.Count(); i = i + 1)
                 {
-                    hoja.Cells[row + 4, 1].Value = Aviones24L[i].AircraftModel;
-                    hoja.Cells[row + 4, 2].Value = Aviones24L[i].AircraftID;
-                    hoja.Cells[row + 4, 3].Value = Aviones24L[i].Estela;
-                    hoja.Cells[row + 4, 4].Value = Aviones24L[i].SID;
-                    hoja.Cells[row + 4, 5].Value = Aviones24L[i].horaDesp;
-                    hoja.Cells[row + 4, 6].Value = Aviones24L[i].TrackNumber;
+                    string ID1= AircraftsID24L[i][0].ToString();
+                    string ID2 = AircraftsID24L[i][1].ToString();
+                    Aircraft Avion1 = FindAircraftById(Aviones24L, ID1);
+                    Aircraft Avion2= FindAircraftById(Aviones24L, ID2);
+                    hoja.Cells[row + 4, 1].Value = Avion1.AircraftModel;
+                    hoja.Cells[row + 4, 2].Value = Avion1.AircraftID;
+                    hoja.Cells[row + 4, 3].Value = Avion1.Estela;
+                    hoja.Cells[row + 4, 4].Value = Avion1.SID;
+                    hoja.Cells[row + 4, 5].Value = Avion1.horaDesp;
+                    hoja.Cells[row + 4, 6].Value = Avion1.TrackNumber;
 
-                    hoja.Cells[row + 4, 7].Value = Aviones24L[i + 1].AircraftModel;
-                    hoja.Cells[row + 4, 8].Value = Aviones24L[i + 1].AircraftID;
-                    hoja.Cells[row + 4, 9].Value = Aviones24L[i + 1].Estela;
-                    hoja.Cells[row + 4, 10].Value = Aviones24L[i + 1].SID;
-                    hoja.Cells[row + 4, 11].Value = Aviones24L[i + 1].horaDesp;
-                    hoja.Cells[row + 4, 12].Value = Aviones24L[i + 1].TrackNumber;
+                    hoja.Cells[row + 4, 7].Value = Avion2.AircraftModel;
+                    hoja.Cells[row + 4, 8].Value = Avion2.AircraftID;
+                    hoja.Cells[row + 4, 9].Value = Avion2.Estela;
+                    hoja.Cells[row + 4, 10].Value = Avion2.SID;
+                    hoja.Cells[row + 4, 11].Value = Avion2.horaDesp;
+                    hoja.Cells[row + 4, 12].Value = Avion2.TrackNumber;
 
 
                     hoja.Cells[row + 4, 13].Value = listaCumplimientosEstela24L[row];
@@ -1838,38 +1872,75 @@ namespace WinForms
                     hoja.Cells[row + 4, 16].Value = listaColisionesEstela24L[row];
                     hoja.Cells[row + 4, 17].Value = listaColisionesRadar24L[row];
                     hoja.Cells[row + 4, 18].Value = listaColisionesLoA24L[row];
+                    if (Distancias24L[row].Any())
+                    {
+                        hoja.Cells[row + 4, 19].Value = Distancias24L[row].Max();
+                        hoja.Cells[row + 4, 20].Value = Distancias24L[row].Min();
+                        hoja.Cells[row + 4, 21].Value = Distancias24L[row].Average();
+                        hoja.Cells[row + 4, 22].Value = CalcularVarianzaYDesviacionEstandar(Distancias24L[row]).Varianza;
+                        hoja.Cells[row + 4, 23].Value = CalcularVarianzaYDesviacionEstandar(Distancias24L[row]).DesviacionEstandar;
+                    }
+                    else
+                    {
+                        // Manejar el caso en el que la secuencia está vacía
+                        hoja.Cells[row + 4, 19].Value = null; // o algún valor predeterminado
+                        hoja.Cells[row + 4, 20].Value = null;
+                        hoja.Cells[row + 4, 21].Value = null;
+                    }
+
+
                     row++;
                 }
 
 
+                // Agregar los encabezados proporcionados
+                hoja.Cells[row+6,1].Value = "RUNWAY 06R";
+                hoja.Cells[row+7,1].Value = "Aircraft 1";
+                hoja.Cells[row+7,7].Value = "Aircraft 2";
+                hoja.Cells[row+7,13].Value = "Tipos de incumplimiento";
+                hoja.Cells[row+7,17].Value = "Nº INCUMPLIMIENTOS";
 
+                for (int i = 0; i < encabezadosColumnas.Length; i++)
+                {
+                    hoja.Cells[row+8, i + 1].Value = encabezadosColumnas[i];
+                }
                 // Insertar datos 06R
                 int fila = 0;
 
-                for (int i = 0; i < Aviones06R.Count(); i = i + 2)
+                for (int i = 0; i < AircraftsID06R.Count(); i = i + 1)
                 {
-                    hoja.Cells[row + 10 + fila, 1].Value = Aviones06R[i].AircraftModel;
-                    hoja.Cells[row + 10 + fila, 2].Value = Aviones06R[i].AircraftID;
-                    hoja.Cells[row + 10 + fila, 3].Value = Aviones06R[i].Estela;
-                    hoja.Cells[row + 10 + fila, 4].Value = Aviones06R[i].SID;
-                    hoja.Cells[row + 10 + fila, 5].Value = Aviones06R[i].horaDesp;
-                    hoja.Cells[row + 10 + fila, 6].Value = Aviones06R[i].TrackNumber;
+                    string ID1 = AircraftsID06R[i][0].ToString();
+                    string ID2 = AircraftsID06R[i][1].ToString();
+                    Aircraft Avion1 = FindAircraftById(Aviones06R, ID1);
+                    Aircraft Avion2 = FindAircraftById(Aviones06R, ID2);
+                    hoja.Cells[row + 10 + fila, 1].Value = Avion1.AircraftModel;
+                    hoja.Cells[row + 10 + fila, 2].Value = Avion1.AircraftID;
+                    hoja.Cells[row + 10 + fila, 3].Value = Avion1.Estela;
+                    hoja.Cells[row + 10 + fila, 4].Value = Avion1.SID;
+                    hoja.Cells[row + 10 + fila, 5].Value = Avion1.horaDesp;
+                    hoja.Cells[row + 10 + fila, 6].Value = Avion1.TrackNumber;
 
-                    hoja.Cells[row + 10 + fila, 7].Value = Aviones06R[i + 1].AircraftModel;
-                    hoja.Cells[row + 10 + fila, 8].Value = Aviones06R[i + 1].AircraftID;
-                    hoja.Cells[row + 10 + fila, 9].Value = Aviones06R[i + 1].Estela;
-                    hoja.Cells[row + 10 + fila, 10].Value = Aviones06R[i + 1].SID;
-                    hoja.Cells[row + 10 + fila, 11].Value = Aviones06R[i + 1].horaDesp;
-                    hoja.Cells[row + 10 + fila, 12].Value = Aviones06R[i + 1].TrackNumber;
+                    hoja.Cells[row + 10 + fila, 7].Value = Avion2.AircraftModel;
+                    hoja.Cells[row + 10 + fila, 8].Value = Avion2.AircraftID;
+                    hoja.Cells[row + 10 + fila, 9].Value = Avion2.Estela;
+                    hoja.Cells[row + 10 + fila, 10].Value = Avion2.SID;
+                    hoja.Cells[row + 10 + fila, 11].Value = Avion2.horaDesp;
+                    hoja.Cells[row + 10 + fila, 12].Value = Avion2.TrackNumber;
 
 
-                    hoja.Cells[row + 10 + fila, 13].Value = listaCumplimientosEstela06R[fila];
-                    hoja.Cells[row + 10 + fila, 14].Value = listaCumplimientosRadar06R[fila];
-                    hoja.Cells[row + 10 + fila, 15].Value = listaCumplimientosLoA06R[fila];
+                    hoja.Cells[row + 10 + fila, 13].Value = listaCumplimientosEstela06R[i];
+                    hoja.Cells[row + 10 + fila, 14].Value = listaCumplimientosRadar06R[i];
+                    hoja.Cells[row + 10 + fila, 15].Value = listaCumplimientosLoA06R[i];
 
-                    hoja.Cells[row + 10 + fila, 16].Value = listaColisionesEstela06R[fila];
-                    hoja.Cells[row + 10 + fila, 17].Value = listaColisionesRadar06R[fila];
-                    hoja.Cells[row + 10 + fila, 18].Value = listaColisionesLoA06R[fila];
+                    hoja.Cells[row + 10 + fila, 16].Value = listaColisionesEstela06R[i];
+                    hoja.Cells[row + 10 + fila, 17].Value = listaColisionesRadar06R[i];
+                    hoja.Cells[row + 10 + fila, 18].Value = listaColisionesLoA06R[i];
+
+                    hoja.Cells[row + 10 + fila, 19].Value = Distancias06R[i].Max();
+                    hoja.Cells[row + 10 + fila, 20].Value = Distancias06R[i].Min();
+                    hoja.Cells[row + 10 + fila, 21].Value = Distancias06R[i].Average();
+                    hoja.Cells[row + 10 + fila, 22].Value = CalcularVarianzaYDesviacionEstandar(Distancias06R[i]).Varianza;
+                    hoja.Cells[row + 10 + fila, 23].Value = CalcularVarianzaYDesviacionEstandar(Distancias06R[i]).DesviacionEstandar;
                     fila++;
                 }
 
@@ -1878,6 +1949,32 @@ namespace WinForms
                 FileInfo fileInfo = new FileInfo(rutaArchivo);
                 paquete.SaveAs(fileInfo);
             }
+        }
+        static Aircraft FindAircraftById(List<Aircraft> aircraftList, string aircraftId)
+        {
+            return aircraftList.FirstOrDefault(aircraft => aircraft.AircraftID == aircraftId);
+        }
+
+        static (double Varianza, double DesviacionEstandar) CalcularVarianzaYDesviacionEstandar(List<double> datos)
+        {
+            if (datos.Count < 2)
+            {
+                throw new ArgumentException("La lista debe contener al menos dos elementos para calcular la varianza y la desviación estándar.");
+            }
+
+            // Calcula la media
+            double media = datos.Average();
+
+            // Calcula la suma de los cuadrados de las diferencias entre cada dato y la media
+            double sumaCuadradosDiferencias = datos.Sum(dato => Math.Pow(dato - media, 2));
+
+            // Calcula la varianza
+            double varianza = sumaCuadradosDiferencias / (datos.Count - 1);
+
+            // Calcula la desviación estándar como la raíz cuadrada de la varianza
+            double desviacionEstandar = Math.Sqrt(varianza);
+
+            return (varianza, desviacionEstandar);
         }
     }
 

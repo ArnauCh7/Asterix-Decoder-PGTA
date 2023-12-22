@@ -216,18 +216,35 @@ namespace WinForms
         {
             if (p3 == null)
             {
-                    
-                p3 = new P3();
-                p3.FormClosed += P3_FormClosed; ;
-                p3.MdiParent = this;
-                p3.Dock = DockStyle.Fill;
-                p3.Show();
-                    
+                if (import != null)
+                {
+                    if (import.Loaded)
+                    {
+                        p3 = new P3();
+                        p3.FormClosed += P3_FormClosed; ;
+                        p3.MdiParent = this;
+                        p3.Dock = DockStyle.Fill;
+                        p3.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"An error occurred: Asterix file not Loaded. Please upload a file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"An error occurred: Asterix file not Loaded. Please upload a file", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
             }
             else
             {
                 p3.Activate();
             }
+
+
         }
 
         private void P3_FormClosed(object? sender, FormClosedEventArgs e)
